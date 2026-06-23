@@ -366,6 +366,34 @@ p { margin: 0; }
 }
 .site-nav a:hover { color: var(--color-brand); text-decoration: none; }
 
+/* ---- Mobile nav toggle (hamburger) ------------------------------------- */
+.nav-toggle {
+  display: none;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: var(--radius-sm);
+  transition: transform var(--duration-base) var(--easing-standard),
+              opacity var(--duration-base) var(--easing-standard);
+}
+.nav-toggle--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle--open span:nth-child(2) { opacity: 0; }
+.nav-toggle--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ---- Footer ------------------------------------------------------------ */
 .site-footer { background-color: var(--color-brand); color: var(--color-text-on-brand); }
 .site-footer a { color: var(--color-text-on-brand); opacity: 0.85; font-size: var(--font-size-sm); }
@@ -403,7 +431,28 @@ p { margin: 0; }
 
 /* ---- Responsive -------------------------------------------------------- */
 @media (max-width: 860px) {
-  .site-nav { display: none; }
+  .nav-toggle { display: flex; }
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--color-surface);
+    border-bottom: var(--border-width) solid var(--color-border);
+    box-shadow: var(--shadow-md);
+  }
+  .site-nav.site-nav--open { display: flex; }
+  .site-nav a {
+    padding: var(--space-4) var(--container-pad);
+    border-top: var(--border-width) solid var(--color-border);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .site-header__inner { position: relative; }
   .section { padding-block: var(--space-9); }
   .site-footer__grid {
     grid-template-columns: 1fr 1fr;
