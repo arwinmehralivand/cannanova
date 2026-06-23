@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Home page — layout only. No new colors/fonts/sizes (those live in tokens).
+   ========================================================================== */
+
+/* ---- Hero -------------------------------------------------------------- */
+.hero { padding-top: var(--space-9); }
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-9);
+  align-items: start;
+}
+.hero h1 { margin: var(--space-5) 0 var(--space-5); max-width: 12ch; }
+.hero__lead { max-width: 46ch; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-7); }
+.hero__proof {
+  margin-top: var(--space-6);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+.hero .fine-print { margin-top: var(--space-4); max-width: 44ch; }
+
+.hero__card { align-self: start; margin-top: var(--space-7); }
+.hero__card-title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-5);
+}
+
+/* ---- Live inventory ---------------------------------------------------- */
+/* auto-fit so the 4 latest items reflow to 4/3/2/1 columns by available width,
+   never overflowing the viewport. */
+.inventory { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+
+/* ---- Strains ----------------------------------------------------------- */
+.strains__note { margin-top: var(--space-6); max-width: 70ch; }
+
+/* ---- Partners ---------------------------------------------------------- */
+.partners { gap: var(--space-4); }
+
+/* ---- Contact ----------------------------------------------------------- */
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: stretch;
+}
+.contact__gap { margin-top: var(--space-5); }
+.contact__cta { margin-top: var(--space-6); }
+.contact__map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-brand-soft);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-sm);
+  min-height: 320px;
+}
+
+/* ---- Responsive -------------------------------------------------------- */
+@media (max-width: 860px) {
+  .hero { padding-top: var(--space-6); }
+  .hero__grid { grid-template-columns: 1fr; gap: var(--space-7); }
+  .hero h1 { max-width: none; }
+  .hero__card { margin-top: 0; }
+  .contact__grid { grid-template-columns: 1fr; }
+  .contact__map { min-height: 220px; }
+}

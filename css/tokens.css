@@ -1,0 +1,99 @@
+/* ==========================================================================
+   CannaNova — Design Tokens (single source of truth)
+   Never hardcode a color, size, spacing, radius, or shadow elsewhere.
+   If a value isn't here, add it here first, then reference it via var(--*).
+   ========================================================================== */
+
+:root {
+  /* ---- Color: brand & accent ------------------------------------------- */
+  --color-brand: #2f5d3f;          /* forest green — logo, headings, primary */
+  --color-brand-strong: #244b32;   /* darker green — hover / emphasis        */
+  --color-brand-soft: #e7efe8;     /* pale green tint — icon discs, panels   */
+  --color-accent: #3f7d5a;         /* mid green — eyebrows, links            */
+
+  /* ---- Color: surfaces & neutrals -------------------------------------- */
+  --color-bg: #f4f1ea;             /* warm page background                   */
+  --color-bg-alt: #efece4;         /* alternating section background         */
+  --color-surface: #ffffff;        /* cards, panels                         */
+  --color-border: #e3ded3;         /* hairline borders                      */
+  --color-border-strong: #d2ccbe;  /* stronger borders / dividers           */
+
+  /* ---- Color: text ----------------------------------------------------- */
+  --color-text: #1f2a23;           /* primary body / headings               */
+  --color-text-muted: #5c6660;     /* secondary copy                        */
+  --color-text-subtle: #8a9089;    /* captions, placeholders, fine print    */
+  --color-text-on-brand: #f4f1ea;  /* text on green surfaces                */
+
+  /* ---- Color: status & strain accents ---------------------------------- */
+  --color-success: #3f7d5a;
+  --color-warning: #c9913f;
+  --color-error: #b4412f;
+  --color-strain-indica: #6b4d9c;  /* purple   */
+  --color-strain-hybrid: #2f5d3f;  /* green    */
+  --color-strain-sativa: #c9913f;  /* amber    */
+
+  /* ---- Typography: families -------------------------------------------- */
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* ---- Typography: scale ----------------------------------------------- */
+  --font-size-xs: 0.75rem;    /* 12 — eyebrows, fine print     */
+  --font-size-sm: 0.875rem;   /* 14 — captions, meta           */
+  --font-size-base: 1rem;     /* 16 — body                     */
+  --font-size-md: 1.125rem;   /* 18 — lead paragraphs          */
+  --font-size-lg: 1.375rem;   /* 22 — card titles              */
+  --font-size-xl: 1.75rem;    /* 28 — section sub              */
+  --font-size-2xl: 2.25rem;   /* 36 — section headings (h2)    */
+  --font-size-3xl: 3.25rem;   /* 52 — hero (h1)                */
+
+  /* ---- Typography: weights & line-heights ------------------------------ */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.3;
+  --line-height-normal: 1.6;
+  --letter-spacing-eyebrow: 0.12em;
+
+  /* ---- Spacing scale --------------------------------------------------- */
+  --space-1: 0.25rem;   /*  4 */
+  --space-2: 0.5rem;    /*  8 */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.5rem;    /* 24 */
+  --space-6: 2rem;      /* 32 */
+  --space-7: 2.5rem;    /* 40 */
+  --space-8: 3rem;      /* 48 */
+  --space-9: 4rem;      /* 64 */
+  --space-10: 5rem;     /* 80 */
+  --space-11: 6rem;     /* 96 */
+  --space-12: 8rem;     /* 128 */
+
+  /* ---- Radius ---------------------------------------------------------- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  /* ---- Shadows --------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(31, 42, 35, 0.04);
+  --shadow-md: 0 4px 16px rgba(31, 42, 35, 0.06);
+  --shadow-lg: 0 12px 32px rgba(31, 42, 35, 0.08);
+
+  /* ---- Borders --------------------------------------------------------- */
+  --border-width: 1px;
+  --border-accent-width: 4px;      /* strain-card left accent */
+
+  /* ---- Layout ---------------------------------------------------------- */
+  --container-max: 1120px;
+  --container-pad: var(--space-5);
+
+  /* ---- Breakpoints (reference; used in media queries) ------------------ */
+  /* --bp-sm: 640px;  --bp-md: 768px;  --bp-lg: 1024px; */
+
+  /* ---- Motion ---------------------------------------------------------- */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
