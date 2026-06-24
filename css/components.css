@@ -427,6 +427,14 @@ p { margin: 0; }
   padding-block: var(--space-9);
 }
 .site-footer__col .logo-cell { max-width: 100%; }
+.footer-eu-logo {
+  display: inline-block;
+  max-width: 220px;
+  border-radius: var(--radius-md);
+  transition: transform var(--duration-base) var(--easing-standard);
+}
+.footer-eu-logo:hover { transform: translateY(-2px); }
+.footer-eu-logo img { width: 100%; height: auto; border-radius: var(--radius-md); }
 .site-footer__col h4 {
   font-family: var(--font-body);
   font-size: var(--font-size-sm);

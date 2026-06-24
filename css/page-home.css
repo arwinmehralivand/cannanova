@@ -34,9 +34,11 @@
 }
 
 /* ---- Live inventory ---------------------------------------------------- */
-/* auto-fit so the 4 latest items reflow to 4/3/2/1 columns by available width,
-   never overflowing the viewport. */
-.inventory { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+/* auto-fill (not auto-fit) keeps the empty column tracks, so when the shop
+   returns fewer than 4 items a lone card stays card-sized (~1/4 width on
+   desktop) instead of stretching across the row and ballooning its image.
+   minmax(min(100%, 220px), 1fr) still collapses to a single column on phones. */
+.inventory { grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
 
 /* ---- Strains ----------------------------------------------------------- */
 .strains__note { margin-top: var(--space-6); max-width: 70ch; }
@@ -54,15 +56,13 @@
 .contact__gap { margin-top: var(--space-5); }
 .contact__cta { margin-top: var(--space-6); }
 .contact__map {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  min-height: 320px;
   background-color: var(--color-brand-soft);
   border: var(--border-width) solid var(--color-border);
   border-radius: var(--radius-md);
-  color: var(--color-text-subtle);
-  font-size: var(--font-size-sm);
-  min-height: 320px;
+  /* iframe map */
+  display: block;
 }
 
 /* ---- Responsive -------------------------------------------------------- */
