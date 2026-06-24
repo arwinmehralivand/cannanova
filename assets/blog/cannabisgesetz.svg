@@ -1,0 +1,18 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Paragrafenzeichen auf einem Dokument als Sinnbild für die Gesetzeslage">
+  <rect width="1200" height="630" fill="#f6f1e7"/>
+  <rect width="1200" height="630" fill="#27503a" opacity="0.03"/>
+  <g transform="translate(440,120)">
+    <rect x="0" y="0" width="320" height="400" rx="18" fill="#ffffff" stroke="#e6dac3" stroke-width="2"/>
+    <g stroke="#d3c4a6" stroke-width="6" stroke-linecap="round">
+      <line x1="50" y1="300" x2="270" y2="300"/>
+      <line x1="50" y1="335" x2="230" y2="335"/>
+    </g>
+    <text x="160" y="225" font-family="Georgia, serif" font-size="200" font-weight="700" fill="#27503a" text-anchor="middle">§</text>
+  </g>
+  <g fill="none" stroke="#4a7559" stroke-width="5">
+    <path d="M250 200 l40 22 0 48 q0 40 -40 58 q-40 -18 -40 -58 l0 -48 z"/>
+  </g>
+  <circle cx="940" cy="430" r="50" fill="#e3ebe0"/>
+  <path d="M915 430 l18 18 38 -42" fill="none" stroke="#27503a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="120" y="575" font-family="Hanken Grotesk, Arial, sans-serif" font-size="30" font-weight="600" fill="#13241b">Medizinal-Cannabisgesetz</text>
+</svg>

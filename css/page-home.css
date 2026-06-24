@@ -10,7 +10,14 @@
   gap: var(--space-9);
   align-items: start;
 }
-.hero h1 { margin: var(--space-5) 0 var(--space-5); max-width: 12ch; }
+.hero h1 {
+  margin: var(--space-5) 0 var(--space-5);
+  max-width: 16ch;
+  /* "Medizinalcannabis" is longer than the line box; allow the German
+     compound word to hyphenate instead of overflowing/clipping. */
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
 .hero__lead { max-width: 46ch; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-7); }
 .hero__proof {

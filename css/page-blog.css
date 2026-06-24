@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Blog article — page-specific layout only. No new colors/fonts/sizes
+   (those live in tokens.css); components come from components.css.
+   ========================================================================== */
+
+/* ---- Breadcrumb -------------------------------------------------------- */
+.breadcrumb {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+.breadcrumb a { color: var(--color-accent); }
+.breadcrumb span[aria-hidden] { margin: 0 var(--space-2); color: var(--color-text-subtle); }
+
+/* ---- Article shell ----------------------------------------------------- */
+.article { padding-top: var(--space-8); }
+.article__inner { max-width: 46rem; margin-inline: auto; }
+
+.article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  align-items: center;
+  margin-top: var(--space-4);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+.article__meta .step__label { margin: 0; }
+.article h1 { margin-top: var(--space-4); hyphens: auto; -webkit-hyphens: auto; }
+
+/* ---- Cover figure ------------------------------------------------------ */
+.article__cover {
+  margin: var(--space-7) 0 var(--space-8);
+}
+.article__cover img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: var(--border-width) solid var(--color-border);
+}
+
+/* ---- Prose ------------------------------------------------------------- */
+.prose { color: var(--color-text); }
+.prose > * + * { margin-top: var(--space-5); }
+.prose h2 {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-2);
+}
+.prose h3 { margin-top: var(--space-6); }
+.prose p,
+.prose li { font-size: var(--font-size-md); line-height: var(--line-height-normal); color: var(--color-text-muted); }
+.prose ul { padding-left: var(--space-5); display: grid; gap: var(--space-3); }
+.prose li::marker { color: var(--color-accent); }
+.prose a { color: var(--color-accent); text-decoration: underline; }
+.prose strong { color: var(--color-text); }
+
+/* Pull-quote / key takeaway */
+.prose blockquote {
+  margin: var(--space-6) 0;
+  padding: var(--space-5) var(--space-6);
+  border-left: var(--border-accent-width) solid var(--color-brand);
+  background-color: var(--color-brand-soft);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+}
+
+/* ---- Sources ----------------------------------------------------------- */
+.article__sources {
+  margin-top: var(--space-9);
+  padding-top: var(--space-6);
+  border-top: var(--border-width) solid var(--color-border-strong);
+}
+.article__sources h2 { font-size: var(--font-size-lg); margin-bottom: var(--space-4); }
+.article__sources ol { padding-left: var(--space-5); display: grid; gap: var(--space-3); }
+.article__sources li { font-size: var(--font-size-sm); color: var(--color-text-muted); overflow-wrap: anywhere; }
+
+/* ---- Disclaimer + CTA -------------------------------------------------- */
+.article__disclaimer {
+  margin-top: var(--space-7);
+  padding: var(--space-5);
+  border: var(--border-width) dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+}
+.article__cta { margin-top: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-4); }
+
+/* ---- Related posts ----------------------------------------------------- */
+.related { margin-top: var(--space-10); }
+.related h2 { margin-bottom: var(--space-6); }

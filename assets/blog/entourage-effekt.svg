@@ -1,0 +1,18 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sich überlagernde Kreise als Sinnbild für das Zusammenspiel von Cannabinoiden und Terpenen">
+  <rect width="1200" height="630" fill="#e3ebe0"/>
+  <g>
+    <circle cx="500" cy="300" r="180" fill="#27503a" opacity="0.55"/>
+    <circle cx="700" cy="300" r="180" fill="#4a7559" opacity="0.55"/>
+    <circle cx="600" cy="430" r="180" fill="#c9913f" opacity="0.45"/>
+  </g>
+  <g fill="#f6f1e7" font-family="Hanken Grotesk, Arial, sans-serif" font-weight="700" font-size="34" text-anchor="middle">
+    <text x="455" y="250">THC</text>
+    <text x="745" y="250">CBD</text>
+    <text x="600" y="470">Terpene</text>
+  </g>
+  <g stroke="#16321f" stroke-width="4" fill="none" opacity="0.7">
+    <path d="M150 150 q40 -50 80 0 q40 50 80 0" />
+    <path d="M150 190 q40 -50 80 0 q40 50 80 0" />
+  </g>
+  <text x="120" y="575" font-family="Hanken Grotesk, Arial, sans-serif" font-size="30" font-weight="600" fill="#13241b">Der Entourage-Effekt</text>
+</svg>
