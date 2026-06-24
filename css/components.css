@@ -343,20 +343,27 @@ p { margin: 0; }
   justify-content: space-between;
   padding-block: var(--space-4);
 }
-.brand { display: inline-flex; flex-direction: column; line-height: 1; }
+.brand { display: inline-flex; align-items: center; gap: var(--space-3); line-height: 1; }
+.brand:hover { text-decoration: none; }
+.brand__mark { flex: none; width: 38px; height: 40px; color: var(--color-brand); display: inline-flex; }
+.brand__mark svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.brand__lockup { display: inline-flex; flex-direction: column; }
 .brand__name {
   font-family: var(--font-display);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-lg);
-  letter-spacing: 0.04em;
+  letter-spacing: -0.01em;
   color: var(--color-brand);
 }
+.brand__name-canna { font-weight: var(--font-weight-regular); }
+.brand--footer { gap: var(--space-3); }
+.brand--footer .brand__mark { width: 34px; height: 36px; }
 .brand__sub {
   font-size: var(--font-size-xs);
   letter-spacing: var(--letter-spacing-eyebrow);
   text-transform: uppercase;
   color: var(--color-text-subtle);
-  margin-top: 2px;
+  margin-top: 3px;
 }
 .site-nav { display: flex; gap: var(--space-6); }
 .site-nav a {

@@ -6,35 +6,35 @@
 
 :root {
   /* ---- Color: brand & accent ------------------------------------------- */
-  --color-brand: #2f5d3f;          /* forest green — logo, headings, primary */
-  --color-brand-strong: #244b32;   /* darker green — hover / emphasis        */
-  --color-brand-soft: #e7efe8;     /* pale green tint — icon discs, panels   */
-  --color-accent: #3f7d5a;         /* mid green — eyebrows, links            */
+  --color-brand: #27503a;          /* forest green — logo, headings, primary */
+  --color-brand-strong: #16321f;   /* deep pine — hover / emphasis           */
+  --color-brand-soft: #e3ebe0;     /* pale sage tint — icon discs, panels    */
+  --color-accent: #4a7559;         /* sage-forest — eyebrows, links          */
 
   /* ---- Color: surfaces & neutrals -------------------------------------- */
-  --color-bg: #f4f1ea;             /* warm page background                   */
-  --color-bg-alt: #efece4;         /* alternating section background         */
+  --color-bg: #f6f1e7;             /* cream page background                  */
+  --color-bg-alt: #ece3d2;         /* sand — alternating section background   */
   --color-surface: #ffffff;        /* cards, panels                         */
-  --color-border: #e3ded3;         /* hairline borders                      */
-  --color-border-strong: #d2ccbe;  /* stronger borders / dividers           */
+  --color-border: #e6dac3;         /* sand hairline borders                 */
+  --color-border-strong: #d3c4a6;  /* clay borders / dividers               */
 
   /* ---- Color: text ----------------------------------------------------- */
-  --color-text: #1f2a23;           /* primary body / headings               */
-  --color-text-muted: #5c6660;     /* secondary copy                        */
-  --color-text-subtle: #8a9089;    /* captions, placeholders, fine print    */
-  --color-text-on-brand: #f4f1ea;  /* text on green surfaces                */
+  --color-text: #13241b;           /* ink — primary body / headings         */
+  --color-text-muted: #3c5446;     /* secondary copy                        */
+  --color-text-subtle: #7e9a84;    /* sage — captions, placeholders         */
+  --color-text-on-brand: #f4eee0;  /* cream text on green surfaces          */
 
   /* ---- Color: status & strain accents ---------------------------------- */
-  --color-success: #3f7d5a;
+  --color-success: #4a7559;
   --color-warning: #c9913f;
   --color-error: #b4412f;
   --color-strain-indica: #6b4d9c;  /* purple   */
-  --color-strain-hybrid: #2f5d3f;  /* green    */
+  --color-strain-hybrid: #27503a;  /* green    */
   --color-strain-sativa: #c9913f;  /* amber    */
 
   /* ---- Typography: families -------------------------------------------- */
-  --font-display: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Fredoka", "Trebuchet MS", Avenir, "Segoe UI", sans-serif;
+  --font-body: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   /* ---- Typography: scale ----------------------------------------------- */
   --font-size-xs: 0.75rem;    /* 12 — eyebrows, fine print     */
