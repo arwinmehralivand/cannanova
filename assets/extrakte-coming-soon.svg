@@ -1,0 +1,31 @@
+<svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Freundliche Illustration: Cannabis-Extrakt-Flasche – bald verfügbar">
+  <title>Extrakte – bald verfügbar</title>
+  <!-- soft backdrop -->
+  <rect width="320" height="240" rx="18" fill="#e3ebe0"/>
+  <ellipse cx="160" cy="206" rx="92" ry="14" fill="#27503a" opacity="0.08"/>
+
+  <!-- sparkles -->
+  <g fill="#c9913f">
+    <path d="M64 56 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 z"/>
+    <path d="M254 74 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 z"/>
+  </g>
+
+  <!-- dropper bottle -->
+  <g transform="translate(118,52)">
+    <!-- pipette top -->
+    <rect x="34" y="-2" width="16" height="26" rx="5" fill="#4a7559"/>
+    <rect x="30" y="20" width="24" height="12" rx="4" fill="#27503a"/>
+    <!-- bottle body -->
+    <rect x="18" y="32" width="48" height="92" rx="16" fill="#27503a"/>
+    <!-- label -->
+    <rect x="26" y="58" width="32" height="44" rx="6" fill="#f6f1e7"/>
+    <!-- leaf mark on label -->
+    <g transform="translate(42,80)" fill="#4a7559">
+      <path d="M0,0 C -8,-20 -4,-44 0,-48 C 4,-44 8,-20 0,0 Z"/>
+      <path d="M0,0 C -7,-17 -3,-37 0,-40 C 3,-37 7,-17 0,0 Z" transform="rotate(38)"/>
+      <path d="M0,0 C -7,-17 -3,-37 0,-40 C 3,-37 7,-17 0,0 Z" transform="rotate(-38)"/>
+    </g>
+    <!-- drop -->
+    <path d="M42 134 c6 8 6 13 0 17 c-6 -4 -6 -9 0 -17 z" fill="#c9913f"/>
+  </g>
+</svg>
