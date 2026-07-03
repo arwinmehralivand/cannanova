@@ -8,17 +8,27 @@
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: var(--space-9);
-  align-items: start;
+  align-items: center;
 }
 .hero h1 {
   margin: var(--space-5) 0 var(--space-5);
-  max-width: 16ch;
+  max-width: 15ch;
+  font-size: clamp(2.4rem, 6vw, 3.75rem);
   /* "Medizinalcannabis" is longer than the line box; allow the German
      compound word to hyphenate instead of overflowing/clipping. */
   hyphens: auto;
   -webkit-hyphens: auto;
 }
 .hero__lead { max-width: 46ch; }
+
+/* Hero illustration panel (replaces the old checklist card). */
+.hero__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: var(--border-width) solid var(--color-border);
+}
+.hero__media img { width: 100%; height: auto; display: block; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-7); }
 .hero__proof {
   margin-top: var(--space-6);

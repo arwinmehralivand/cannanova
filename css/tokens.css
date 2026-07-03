@@ -12,17 +12,18 @@
   --color-accent: #4a7559;         /* sage-forest — eyebrows, links          */
 
   /* ---- Color: surfaces & neutrals -------------------------------------- */
-  --color-bg: #f6f1e7;             /* cream page background                  */
-  --color-bg-alt: #ece3d2;         /* sand — alternating section background   */
+  --color-bg: #ffffff;             /* clinical white page background         */
+  --color-bg-alt: #f4f7f5;         /* cool light grey — alternating sections */
   --color-surface: #ffffff;        /* cards, panels                         */
-  --color-border: #e6dac3;         /* sand hairline borders                 */
-  --color-border-strong: #d3c4a6;  /* clay borders / dividers               */
+  --color-border: #e4ebe7;         /* cool hairline borders                 */
+  --color-border-strong: #d3ddd8;  /* stronger borders / dividers           */
+  --color-brand-darker: #14311d;   /* deep pine — dark contrast band        */
 
   /* ---- Color: text ----------------------------------------------------- */
-  --color-text: #13241b;           /* ink — primary body / headings         */
-  --color-text-muted: #3c5446;     /* secondary copy                        */
-  --color-text-subtle: #7e9a84;    /* sage — captions, placeholders         */
-  --color-text-on-brand: #f4eee0;  /* cream text on green surfaces          */
+  --color-text: #17231e;           /* ink — primary body / headings         */
+  --color-text-muted: #57665f;     /* secondary copy                        */
+  --color-text-subtle: #8a978f;    /* captions, placeholders                */
+  --color-text-on-brand: #ffffff;  /* text on green surfaces                */
 
   /* ---- Color: status & strain accents ---------------------------------- */
   --color-success: #4a7559;
@@ -33,7 +34,7 @@
   --color-strain-sativa: #c9913f;  /* amber    */
 
   /* ---- Typography: families -------------------------------------------- */
-  --font-display: "Fredoka", "Trebuchet MS", Avenir, "Segoe UI", sans-serif;
+  --font-display: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-body: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   /* ---- Typography: scale ----------------------------------------------- */

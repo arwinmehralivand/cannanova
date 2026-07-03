@@ -95,6 +95,27 @@ p { margin: 0; }
 .section--alt { background-color: var(--color-bg-alt); }
 .section--brand { background-color: var(--color-brand); color: var(--color-text-on-brand); }
 
+/* Dark contrast band — a single deep-green section for visual punch. */
+.section--dark { background-color: var(--color-brand-darker); color: var(--color-text-on-brand); }
+.section--dark h2 { color: #ffffff; }
+.section--dark .eyebrow { color: var(--color-strain-sativa); }
+.section--dark .card--step {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.section--dark .card--step .card__title { color: #ffffff; }
+.section--dark .card--step .card__text { color: rgba(255, 255, 255, 0.82); }
+.section--dark .icon-disc { background: rgba(255, 255, 255, 0.1); color: #ffffff; }
+.section--dark .step__label { color: var(--color-strain-sativa); }
+
+/* Trust strip — Asavita-style credibility band under the hero. */
+.trust-strip { background-color: var(--color-bg-alt); border-top: var(--border-width) solid var(--color-border); border-bottom: var(--border-width) solid var(--color-border); }
+.trust-strip__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); padding-block: var(--space-6); }
+.trust-item { display: flex; gap: var(--space-3); align-items: center; }
+.trust-item .icon-disc { width: 46px; height: 46px; flex: none; }
+.trust-item strong { display: block; color: var(--color-text); font-size: var(--font-size-base); line-height: 1.2; }
+.trust-item span { color: var(--color-text-muted); font-size: var(--font-size-sm); }
+
 .section__head { max-width: 46rem; margin-bottom: var(--space-8); }
 .section__head .eyebrow { margin-bottom: var(--space-3); }
 .section__head h2 { margin-bottom: var(--space-4); }
@@ -156,6 +177,10 @@ p { margin: 0; }
 
 .card__title { margin-bottom: var(--space-3); }
 .card__text { color: var(--color-text-muted); font-size: var(--font-size-base); }
+
+/* Interactive cards lift on hover for a livelier, modern feel. */
+.product-card, .post-card { transition: box-shadow var(--duration-base) var(--easing-standard), transform var(--duration-base) var(--easing-standard); }
+.product-card:hover, .post-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
 
 /* Strain card: colored left accent driven by --accent ------------------- */
 .card--accent { border-left: var(--border-accent-width) solid var(--accent, var(--color-brand)); }
@@ -490,11 +515,13 @@ p { margin: 0; }
     padding-block: var(--space-7);
   }
   .section__head { margin-bottom: var(--space-6); }
+  .trust-strip__grid { grid-template-columns: 1fr 1fr; gap: var(--space-4); }
 }
 
 @media (max-width: 540px) {
   :root { --container-pad: var(--space-4); }
   .section { padding-block: var(--space-8); }
+  .trust-strip__grid { grid-template-columns: 1fr; }
   .site-footer__grid { grid-template-columns: 1fr; }
   .card { padding: var(--space-5); }
 }
