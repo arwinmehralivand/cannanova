@@ -52,6 +52,15 @@
 
 /* ---- Strains ----------------------------------------------------------- */
 .strains__note { margin-top: var(--space-6); max-width: 70ch; }
+.strain-icon {
+  width: 46px; height: 46px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--accent) 12%, #ffffff);
+  color: var(--accent);
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-bottom: var(--space-4);
+}
+.strain-icon svg { width: 26px; height: 26px; display: block; }
 
 /* ---- Extracts (coming soon) -------------------------------------------- */
 .coming-soon {
