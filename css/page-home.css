@@ -59,6 +59,10 @@
 }
 .inventory__more-note { max-width: 48ch; }
 
+/* ---- FAQ sub-chapter --------------------------------------------------- */
+.faq-chapter { margin-top: var(--space-9); margin-bottom: var(--space-3); }
+.faq-chapter__intro { max-width: 64ch; margin-bottom: var(--space-5); }
+
 /* ---- Strains ----------------------------------------------------------- */
 .strains__note { margin-top: var(--space-6); max-width: 70ch; }
 .strain-icon {
