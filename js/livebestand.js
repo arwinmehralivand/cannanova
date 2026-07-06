@@ -51,7 +51,7 @@ function productCard(p) {
   // The shop itself lives at shop.cannanova-langen.de (provided by cannaflow.de);
   // this repo is only the landing page, so product links point at that storefront.
   const href = p.slug
-    ? `https://shop.cannanova-langen.de/${encodeURIComponent(p.slug)}`
+    ? `https://shop.cannanova-langen.de/products/${encodeURIComponent(p.slug)}`
     : null;
 
   const media = img
