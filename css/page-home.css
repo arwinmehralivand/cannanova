@@ -91,6 +91,8 @@
 
 /* ---- Partners ---------------------------------------------------------- */
 .partners { gap: var(--space-4); }
+.partners .logo-cell { min-height: 88px; padding: var(--space-4) var(--space-5); }
+.partners .logo-cell img { max-height: 44px; max-width: 100%; width: auto; object-fit: contain; }
 
 /* ---- Contact ----------------------------------------------------------- */
 .contact__grid {
