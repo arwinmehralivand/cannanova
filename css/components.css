@@ -107,6 +107,8 @@ p { margin: 0; }
 .section--dark .card--step .card__text { color: rgba(255, 255, 255, 0.82); }
 .section--dark .icon-disc { background: rgba(255, 255, 255, 0.1); color: #ffffff; }
 .section--dark .step__label { color: var(--color-strain-sativa); }
+.section--dark .card--step .card__text a { color: var(--color-strain-sativa); text-decoration: underline; }
+.section--dark .card--step .card__text a:hover { color: #ffffff; }
 
 /* Trust strip — Asavita-style credibility band under the hero. */
 .trust-strip { background-color: var(--color-bg-alt); border-top: var(--border-width) solid var(--color-border); border-bottom: var(--border-width) solid var(--color-border); }
