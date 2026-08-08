@@ -8,8 +8,11 @@
    ========================================================================== */
 
 const CONFIG = {
-  apiBase: "https://api-pharmacy.cannaflow.de/api/shop/v1",
-  pharmacyId: "F2KR8J9Y2",
+  // The shop resolves the pharmacy by its own domain, so the products API is
+  // served from the storefront origin (the standalone api-pharmacy.cannaflow.de
+  // host was retired). No x-pharmacy-id header needed — that would also force a
+  // CORS preflight cross-subdomain.
+  apiBase: "https://shop.cannanova-langen.de/api/shop/v1",
   count: 4,
 };
 
@@ -109,7 +112,7 @@ async function loadInventory() {
   url.searchParams.set("page", "1");
 
   try {
-    const res = await fetch(url, { headers: { "x-pharmacy-id": CONFIG.pharmacyId } });
+    const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const body = await res.json();
     const items = Array.isArray(body.data) ? body.data : [];
