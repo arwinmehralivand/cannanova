@@ -155,12 +155,7 @@
   max-width: 150px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.72;
-  transition: filter var(--duration-base) var(--easing-standard),
-              opacity var(--duration-base) var(--easing-standard);
 }
-.partners__logo:hover img { filter: none; opacity: 1; }
 
 /* ---- Contact ----------------------------------------------------------- */
 .contact__grid {
