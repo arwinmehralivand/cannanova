@@ -86,6 +86,38 @@ function productCard(p) {
   return card;
 }
 
+// Hero spec card: the newest product, set like a batch label. `null` renders a
+// quiet fallback so the card never shows stale placeholders.
+function renderHeroSpec(p) {
+  const el = document.getElementById("hero-spec");
+  if (!el) return;
+  const nameEl = el.querySelector(".spec__name");
+  const dds = el.querySelectorAll(".spec__data dd");
+  const priceEl = el.querySelector(".spec__price");
+  const linkEl = el.querySelector(".spec__foot a");
+  el.classList.remove("spec--loading");
+
+  if (!p) {
+    nameEl.textContent = "Aktueller Bestand im Shop";
+    dds.forEach((d) => { d.textContent = "–"; });
+    priceEl.textContent = "";
+    return;
+  }
+
+  const genetic = GENETIC[p.genetic] ?? { label: p.genetic ?? "–" };
+  const unit = UNIT_LABEL[p.unit] ?? String(p.unit ?? "");
+  const pct = (v) => (v === null || v === undefined || v === "" ? "–" : `${v} %`);
+  const values = [genetic.label, pct(p.thc), pct(p.cbd), p.manufacturer ?? "–"];
+
+  nameEl.textContent = p.name ?? "–";
+  dds.forEach((d, i) => { d.textContent = values[i] ?? "–"; });
+  priceEl.innerHTML = `${euro(p.priceCent)}<span class="unit"> / ${esc(unit)}</span>`;
+  if (linkEl && p.slug) {
+    linkEl.href = `https://shop.cannanova-langen.de/products/${encodeURIComponent(p.slug)}`;
+    linkEl.textContent = "Im Shop ansehen";
+  }
+}
+
 function skeletons(n) {
   const one = `
     <article class="card product-card product-card--skeleton" aria-hidden="true">
@@ -120,13 +152,16 @@ async function loadInventory() {
     if (!items.length) {
       grid.innerHTML =
         `<p class="inventory__notice">Aktuell sind keine Produkte im Livebestand verfügbar. Schau bald wieder vorbei.</p>`;
+      renderHeroSpec(null);
       return;
     }
 
     grid.innerHTML = items.slice(0, CONFIG.count).map(productCard).join("");
+    renderHeroSpec(items[0]);
   } catch (err) {
     grid.innerHTML =
       `<p class="inventory__notice">Der Livebestand konnte gerade nicht geladen werden. Bitte versuche es später erneut.</p>`;
+    renderHeroSpec(null);
     // Surface the reason for debugging without breaking the page.
     console.error("[livebestand] load failed:", err);
   }

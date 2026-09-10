@@ -2,44 +2,56 @@
    CannaNova — Design Tokens (single source of truth)
    Never hardcode a color, size, spacing, radius, or shadow elsewhere.
    If a value isn't here, add it here first, then reference it via var(--*).
+
+   Direction: "the pharmacy label" — clinical white, deep pharmacy green,
+   hairline rules, and a monospaced data face so numbers (THC, CBD, prices)
+   align like a certificate of analysis. One amber signal color, used only
+   for what is live or priced.
    ========================================================================== */
 
 :root {
-  /* ---- Color: brand & accent ------------------------------------------- */
-  --color-brand: #27503a;          /* forest green — logo, headings, primary */
-  --color-brand-strong: #16321f;   /* deep pine — hover / emphasis           */
-  --color-brand-soft: #e3ebe0;     /* pale sage tint — icon discs, panels    */
-  --color-accent: #4a7559;         /* sage-forest — eyebrows, links          */
+  /* ---- Color: brand ---------------------------------------------------- */
+  --color-brand: #1f4a33;          /* pharmacy green — logo, headings, primary */
+  --color-brand-strong: #12301f;   /* deep pine — hover / emphasis             */
+  --color-brand-soft: #e6efe8;     /* pale sage tint — subtle panels           */
+  --color-brand-darker: #12301f;   /* deep pine — the single dark band         */
+  --color-accent: #2f6a49;         /* readable green — links                   */
+
+  /* The one signal color: live indicator, price, step index. Nowhere else. */
+  --color-signal: #b8892e;
+  --color-signal-soft: #f6efdf;
 
   /* ---- Color: surfaces & neutrals -------------------------------------- */
-  --color-bg: #ffffff;             /* clinical white page background         */
-  --color-bg-alt: #f4f7f5;         /* cool light grey — alternating sections */
-  --color-surface: #ffffff;        /* cards, panels                         */
-  --color-border: #e4ebe7;         /* cool hairline borders                 */
-  --color-border-strong: #d3ddd8;  /* stronger borders / dividers           */
-  --color-brand-darker: #14311d;   /* deep pine — dark contrast band        */
+  --color-bg: #ffffff;             /* clinical white page background           */
+  --color-bg-alt: #f3f5f2;         /* green-tinted off-white — alternate bands */
+  --color-surface: #ffffff;        /* cards, panels                            */
+  --color-border: #e2e8e4;         /* hairline rules                           */
+  --color-border-strong: #cfd8d2;  /* stronger rules / dividers                */
 
   /* ---- Color: text ----------------------------------------------------- */
-  --color-text: #17231e;           /* ink — primary body / headings         */
-  --color-text-muted: #57665f;     /* secondary copy                        */
-  --color-text-subtle: #8a978f;    /* captions, placeholders                */
-  --color-text-on-brand: #ffffff;  /* text on green surfaces                */
+  --color-text: #15201a;           /* ink                                      */
+  --color-text-muted: #566159;     /* secondary copy                           */
+  --color-text-subtle: #8a948d;    /* captions, placeholders                   */
+  --color-text-on-brand: #ffffff;  /* text on green surfaces                   */
+  --color-text-on-dark-muted: rgba(255, 255, 255, 0.72);
+  --color-rule-on-dark: rgba(255, 255, 255, 0.16);
 
   /* ---- Color: status & strain accents ---------------------------------- */
-  --color-success: #4a7559;
-  --color-warning: #c9913f;
+  --color-success: #2f6a49;
+  --color-warning: #b8892e;
   --color-error: #b4412f;
-  --color-strain-indica: #6b4d9c;  /* purple   */
-  --color-strain-hybrid: #27503a;  /* green    */
-  --color-strain-sativa: #c9913f;  /* amber    */
+  --color-strain-indica: #6b4d9c;  /* purple */
+  --color-strain-hybrid: #1f4a33;  /* green  */
+  --color-strain-sativa: #b8892e;  /* amber  */
 
   /* ---- Typography: families -------------------------------------------- */
-  --font-display: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Bricolage Grotesque", "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-body: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   /* ---- Typography: scale ----------------------------------------------- */
-  --font-size-xs: 0.75rem;    /* 12 — eyebrows, fine print     */
-  --font-size-sm: 0.875rem;   /* 14 — captions, meta           */
+  --font-size-xs: 0.75rem;    /* 12 — labels, fine print       */
+  --font-size-sm: 0.875rem;   /* 14 — captions, meta, data     */
   --font-size-base: 1rem;     /* 16 — body                     */
   --font-size-md: 1.125rem;   /* 18 — lead paragraphs          */
   --font-size-lg: 1.375rem;   /* 22 — card titles              */
@@ -47,15 +59,17 @@
   --font-size-2xl: 2.25rem;   /* 36 — section headings (h2)    */
   --font-size-3xl: 3.25rem;   /* 52 — hero (h1)                */
 
-  /* ---- Typography: weights & line-heights ------------------------------ */
+  /* ---- Typography: weights, line-heights, tracking --------------------- */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --line-height-tight: 1.1;
+  --line-height-tight: 1.05;
   --line-height-snug: 1.3;
   --line-height-normal: 1.6;
-  --letter-spacing-eyebrow: 0.12em;
+  --letter-spacing-eyebrow: 0.08em;
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-display: -0.03em;
 
   /* ---- Spacing scale --------------------------------------------------- */
   --space-1: 0.25rem;   /*  4 */
@@ -72,29 +86,31 @@
   --space-12: 8rem;     /* 128 */
 
   /* ---- Radius ---------------------------------------------------------- */
+  --radius-xs: 4px;
   --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
   --radius-pill: 999px;
 
-  /* ---- Shadows --------------------------------------------------------- */
-  --shadow-sm: 0 1px 2px rgba(31, 42, 35, 0.04);
-  --shadow-md: 0 4px 16px rgba(31, 42, 35, 0.06);
-  --shadow-lg: 0 12px 32px rgba(31, 42, 35, 0.08);
+  /* ---- Shadows (hover-only; resting surfaces use hairlines) ------------ */
+  --shadow-sm: 0 1px 2px rgba(21, 32, 26, 0.05);
+  --shadow-md: 0 6px 20px rgba(21, 32, 26, 0.08);
+  --shadow-lg: 0 14px 36px rgba(21, 32, 26, 0.10);
 
   /* ---- Borders --------------------------------------------------------- */
   --border-width: 1px;
-  --border-accent-width: 4px;      /* strain-card left accent */
+  --border-accent-width: 3px;      /* strain-card left accent */
 
   /* ---- Layout ---------------------------------------------------------- */
   --container-max: 1120px;
   --container-pad: var(--space-5);
 
   /* ---- Breakpoints (reference; used in media queries) ------------------ */
-  /* --bp-sm: 640px;  --bp-md: 768px;  --bp-lg: 1024px; */
+  /* --bp-sm: 540px;  --bp-md: 860px; */
 
   /* ---- Motion ---------------------------------------------------------- */
   --duration-fast: 120ms;
   --duration-base: 200ms;
+  --duration-slow: 400ms;
   --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
 }
