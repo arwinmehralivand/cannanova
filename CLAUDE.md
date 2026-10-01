@@ -161,9 +161,16 @@ This site is maintained largely by **non-technical users**, and the goal is
 simply to **update the live website in production**. Optimize the workflow for
 that: small, direct, low-ceremony changes.
 
-- **We always push directly to `main`.** `main` is the live production site —
-  committing and pushing to `main` publishes the change. There is no separate
-  release step.
+- **We always push directly to `main`,** then **deploy with `npx wrangler deploy`**.
+  The live site (`cannanova-langen.de` and `www.`) is the Cloudflare Worker
+  `cannanova` (static assets only, config in `wrangler.jsonc`). There is no
+  GitHub → Cloudflare auto-deploy: a push alone does NOT update the live site.
+- `.assetsignore` keeps repo-internal files (`.git`, `.claude`, `CLAUDE.md`,
+  `README.md`, configs) off the website — keep it up to date when adding
+  non-site files to the repo root. After deploying, the expected upload is
+  only the site files (HTML, `css/`, `js/`, `assets/`, `blog/`, sitemap, robots).
+- Pages use clean URLs (`/blog/article-name`, no `.html`); Cloudflare redirects
+  `.html` URLs there. Keep canonicals, sitemap and internal links extensionless.
 - **No PR / branch dance required.** Do not create feature branches or open pull
   requests for routine content and layout edits; commit to `main` and push.
 - **No build step:** edit HTML/CSS/JS directly and open the page in a browser

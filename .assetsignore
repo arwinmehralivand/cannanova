@@ -1,0 +1,18 @@
+# Files in this repo that must NOT be published on the website.
+.git
+.git/**
+.github
+.claude
+.claude/**
+.wrangler
+node_modules
+.DS_Store
+**/.DS_Store
+.gitignore
+.assetsignore
+wrangler.jsonc
+CLAUDE.md
+README.md
+# Local-only logo exports (kept for download, not part of the site)
+assets/cannanova-logo.png
+assets/cannanova-logo.svg

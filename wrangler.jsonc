@@ -1,0 +1,13 @@
+{
+  // Cloudflare Worker that serves this static site (static assets only, no code).
+  // Deploy with:  npx wrangler deploy
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cannanova",
+  "compatibility_date": "2026-08-08",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page"
+  }
+}
