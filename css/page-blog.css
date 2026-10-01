@@ -89,3 +89,23 @@
 /* ---- Related posts ----------------------------------------------------- */
 .related { margin-top: var(--space-10); }
 .related h2 { margin-bottom: var(--space-6); }
+.related .post-card__title { font-size: var(--font-size-md); }
+
+/* Numbered steps inside an article (e.g. a process) */
+.prose ol { padding-left: var(--space-5); display: grid; gap: var(--space-3); }
+.prose ol li::marker { color: var(--color-signal); font-family: var(--font-mono); }
+
+/* ---- Blog index -------------------------------------------------------- */
+.blog-index__feature { margin-bottom: var(--space-5); }
+.post-card--wide { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+.post-card--wide .post-card__media { aspect-ratio: auto; height: 100%; border-bottom: 0; border-right: var(--border-width) solid var(--color-border); }
+.post-card--wide .post-card__body { padding: var(--space-7); justify-content: center; }
+.post-card--wide .post-card__title { font-size: var(--font-size-xl); }
+
+@media (max-width: 860px) {
+  .post-card--wide { grid-template-columns: 1fr; }
+  .post-card--wide .post-card__media { aspect-ratio: 1200 / 630; border-right: 0; border-bottom: var(--border-width) solid var(--color-border); }
+  .post-card--wide .post-card__body { padding: var(--space-5); }
+  .post-card--wide .post-card__title { font-size: var(--font-size-lg); }
+}
+.related .grid--3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }

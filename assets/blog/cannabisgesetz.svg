@@ -1,18 +1,17 @@
-<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Paragrafenzeichen auf einem Dokument als Sinnbild für die Gesetzeslage">
-  <rect width="1200" height="630" fill="#f6f1e7"/>
-  <rect width="1200" height="630" fill="#27503a" opacity="0.03"/>
-  <g transform="translate(440,120)">
-    <rect x="0" y="0" width="320" height="400" rx="18" fill="#ffffff" stroke="#e6dac3" stroke-width="2"/>
-    <g stroke="#d3c4a6" stroke-width="6" stroke-linecap="round">
-      <line x1="50" y1="300" x2="270" y2="300"/>
-      <line x1="50" y1="335" x2="230" y2="335"/>
-    </g>
-    <text x="160" y="225" font-family="Georgia, serif" font-size="200" font-weight="700" fill="#27503a" text-anchor="middle">§</text>
-  </g>
-  <g fill="none" stroke="#4a7559" stroke-width="5">
-    <path d="M250 200 l40 22 0 48 q0 40 -40 58 q-40 -18 -40 -58 l0 -48 z"/>
-  </g>
-  <circle cx="940" cy="430" r="50" fill="#e3ebe0"/>
-  <path d="M915 430 l18 18 38 -42" fill="none" stroke="#27503a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="120" y="575" font-family="Hanken Grotesk, Arial, sans-serif" font-size="30" font-weight="600" fill="#13241b">Medizinal-Cannabisgesetz</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Dokument mit Paragrafenzeichen und Zeitleiste von 2024 bis heute">
+<rect width="1200" height="630" fill="#e6efe8"/>
+<rect x="28" y="28" width="1144" height="574" rx="10" fill="none" stroke="#cfd8d2" stroke-width="2"/>
+<circle cx="80" cy="84" r="7" fill="#b8892e"/>
+<text x="100" y="91" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="19" letter-spacing="3" fill="#566159">CANNANOVA · WISSEN</text>
+<g transform="translate(640,96)"><rect width="300" height="380" rx="14" fill="#ffffff" stroke="#1f4a33" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="235" font-family="Georgia, serif" font-size="190" font-weight="700" fill="#1f4a33" text-anchor="middle">§</text>
+<path d="M56 300h188M56 336h140" stroke="#cfd8d2" stroke-width="8" stroke-linecap="round"/></g>
+<line x1="1050" y1="130" x2="1050" y2="440" stroke="#cfd8d2" stroke-width="4"/>
+<circle cx="1050" cy="140" r="14" fill="#1f4a33"/><circle cx="1050" cy="285" r="14" fill="#1f4a33"/>
+<circle cx="1050" cy="430" r="16" fill="#b8892e"/>
+<text x="1078" y="146" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="16" fill="#566159">2024</text>
+<text x="1078" y="291" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="16" fill="#566159">2025</text>
+<text x="1078" y="436" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="16" fill="#b8892e">heute</text>
+<text x="72" y="508" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="20" letter-spacing="3" fill="#566159">AKTUELLES &amp; RECHT</text>
+<text x="72" y="556" font-family="Hanken Grotesk, Helvetica Neue, Arial, sans-serif" font-size="38" font-weight="600" fill="#1f4a33">Medizinal-Cannabisgesetz</text>
 </svg>

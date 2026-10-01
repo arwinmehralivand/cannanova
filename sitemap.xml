@@ -2,31 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cannanova-langen.de/</loc>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://cannanova-langen.de/blog/cannabis-chronische-schmerzen-studienlage</loc>
+    <loc>https://cannanova-langen.de/blog/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cannanova-langen.de/blog/cannabis-rezept-telemedizin</loc>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cannanova-langen.de/blog/entourage-effekt-terpene-cannabinoide</loc>
+    <loc>https://cannanova-langen.de/blog/cannabis-krankenkasse-kostenuebernahme-2026</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cannanova-langen.de/blog/vaporizer-cannabis-verdampfen</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cannanova-langen.de/blog/thc-cbd-unterschiede</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cannanova-langen.de/blog/bestrahlte-unbestrahlte-cannabisblueten</loc>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cannanova-langen.de/blog/medizinal-cannabisgesetz-aenderungen-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cannanova-langen.de/blog/cannabisblueten-richtig-lagern</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cannanova-langen.de/blog/cannabis-entzuendungshemmende-wirkung</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cannanova-langen.de/blog/cannabis-chronische-schmerzen-studienlage</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cannanova-langen.de/blog/entourage-effekt-terpene-cannabinoide</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cannanova-langen.de/blog/cannabisblueten-richtig-lagern</loc>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

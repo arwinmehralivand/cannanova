@@ -29,17 +29,22 @@
   flex-wrap: wrap;
   gap: var(--space-2);
 }
+/* The headline sits in two set lines. Sizing follows the copy column
+   (container units) so "Medizinalcannabis." always fits on one line and
+   never hyphenates; the clamp() is the fallback for older browsers. */
+.hero__copy { container-type: inline-size; }
 .hero h1 {
   margin: var(--space-5) 0;
-  max-width: 13ch;
-  font-size: clamp(2.6rem, 6.4vw, 4.25rem);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-size: clamp(1.75rem, 11cqi, 4.25rem);
   line-height: 1.02;
   letter-spacing: var(--letter-spacing-display);
-  /* "Medizinalcannabis" is longer than the line box; allow the German
-     compound word to hyphenate instead of overflowing/clipping. */
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  hyphens: manual;
+  -webkit-hyphens: manual;
 }
+.hero__title-lead,
+.hero__title-key { display: block; white-space: nowrap; }
+.hero__title-key { color: var(--color-brand); }
 .hero__lead { max-width: 44ch; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-7); }
 
@@ -189,58 +194,63 @@
   gap: var(--space-4) var(--space-6);
 }
 
-/* ---- Two paths (dark band) --------------------------------------------- */
-.paths {
+/* ---- How it works: telemedicine → prescription → delivery (dark band) - */
+.flow {
+  list-style: none;
+  counter-reset: flow;
+  margin: 0;
+  padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: var(--border-width) solid var(--color-rule-on-dark);
 }
-.path {
+.flow__step {
+  counter-increment: flow;
   display: grid;
   align-content: start;
-  justify-items: start;
-  gap: var(--space-4);
-  padding: var(--space-7) var(--space-7) var(--space-2) 0;
+  gap: var(--space-3);
+  padding: var(--space-7) var(--space-6) var(--space-6) 0;
+  color: var(--color-text-on-dark-muted);
 }
-.path + .path {
-  padding-left: var(--space-7);
-  padding-right: 0;
-  border-left: var(--border-width) solid var(--color-rule-on-dark);
+.flow__step + .flow__step { padding-left: var(--space-6); border-left: var(--border-width) solid var(--color-rule-on-dark); }
+.flow__icon { width: 4.5rem; height: 4.5rem; color: var(--color-text-on-brand); --dot: var(--color-signal); }
+.flow__title { color: var(--color-text-on-brand); font-size: var(--font-size-lg); }
+.flow__title::before {
+  content: counter(flow, decimal-leading-zero);
+  display: block;
+  margin-bottom: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+  color: var(--color-signal);
 }
-.path__kicker {
+.flow__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-6);
+  margin-top: var(--space-6);
+}
+.flow__alt {
+  margin-top: var(--space-9);
+  padding-top: var(--space-6);
+  border-top: var(--border-width) solid var(--color-rule-on-dark);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-7);
+  color: var(--color-text-on-dark-muted);
+}
+.flow__alt > div { max-width: 40rem; display: grid; gap: var(--space-2); }
+.flow__kicker {
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
   letter-spacing: var(--letter-spacing-eyebrow);
   text-transform: uppercase;
   color: var(--color-signal);
 }
-.path__title { color: var(--color-text-on-brand); font-size: var(--font-size-xl); }
-.path__steps {
-  list-style: none;
-  counter-reset: step;
-  margin: 0 0 var(--space-3);
-  padding: 0;
-  display: grid;
-  gap: var(--space-4);
-}
-.path__steps li {
-  counter-increment: step;
-  position: relative;
-  padding-left: 2.25rem;
-  color: var(--color-text-on-dark-muted);
-}
-.path__steps li::before {
-  content: counter(step, decimal-leading-zero);
-  position: absolute;
-  left: 0;
-  top: 2px;
-  font-family: var(--font-mono);
-  font-variant-numeric: tabular-nums;
-  font-size: var(--font-size-sm);
-  color: var(--color-signal);
-}
-.path__steps strong { color: var(--color-text-on-brand); font-weight: var(--font-weight-semibold); }
-.path__steps a { color: var(--color-signal); text-decoration: underline; }
 
 /* ---- Strains: rows that filter the Livebestand ------------------------- */
 .strains {
@@ -250,7 +260,7 @@
 }
 .strain {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
   gap: var(--space-3);
   padding: var(--space-5) var(--space-5) var(--space-5) var(--space-4);
   border-left: var(--border-accent-width) solid var(--accent, var(--color-brand));
@@ -260,6 +270,7 @@
 }
 .strain + .strain { margin-left: var(--space-2); }
 .strain:hover { text-decoration: none; background-color: var(--color-bg-alt); }
+.strain__leaf { width: 3.5rem; height: 3.15rem; color: var(--accent, var(--color-brand)); margin-bottom: var(--space-1); }
 .strain__name { font-family: var(--font-display); font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-snug); }
 .strain__text { color: var(--color-text-muted); font-size: var(--font-size-sm); }
 .strain__count {
@@ -300,6 +311,11 @@
 }
 .law__now .law__date { color: var(--color-signal); font-weight: var(--font-weight-medium); }
 
+/* ---- Extracts: notice with a dropper bottle drawing ------------------- */
+.extracts { display: flex; align-items: center; gap: var(--space-9); }
+.extracts .notice { flex: 1 1 auto; }
+.extracts__art { flex: none; width: 8rem; height: 10rem; color: var(--color-brand); --dot: var(--color-signal); }
+
 /* ---- Partners: plain logos on a rule ----------------------------------- */
 .partners {
   display: grid;
@@ -321,6 +337,8 @@
 }
 .post-card--feature { grid-row: span 2; }
 .post-card--feature .post-card__title { font-size: var(--font-size-xl); }
+.posts .post-card:not(.post-card--feature) .post-card__title { font-size: var(--font-size-md); }
+.posts__more { margin-top: var(--space-7); }
 
 /* ---- FAQ --------------------------------------------------------------- */
 .faq {
@@ -381,9 +399,13 @@ section[id] { scroll-margin-top: var(--space-9); }
   .hero { padding-top: var(--space-8); padding-bottom: var(--space-8); }
   .hero__grid { grid-template-columns: 1fr; gap: var(--space-7); }
   .hero h1 { max-width: none; }
-  .paths { grid-template-columns: 1fr; }
-  .path { padding-right: 0; }
-  .path + .path { padding-left: 0; border-left: 0; border-top: var(--border-width) solid var(--color-rule-on-dark); }
+  .flow { grid-template-columns: 1fr; }
+  .flow__step { grid-template-columns: 4rem minmax(0, 1fr); column-gap: var(--space-5); padding: var(--space-5) 0; }
+  .flow__step > :not(.flow__icon) { grid-column: 2; }
+  .flow__icon { grid-row: 1 / span 2; width: 4rem; height: 4rem; }
+  .flow__step + .flow__step { padding-left: 0; border-left: 0; border-top: var(--border-width) solid var(--color-rule-on-dark); }
+  .extracts { gap: var(--space-6); }
+  .extracts__art { width: 5.5rem; height: 7rem; }
   .strains { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); border-top: 0; }
   .strain + .strain { margin-left: 0; }
   .law { grid-template-columns: 1fr; gap: var(--space-6); }
@@ -404,4 +426,5 @@ section[id] { scroll-margin-top: var(--space-9); }
   .strains { grid-template-columns: 1fr; }
   .law__timeline li { grid-template-columns: 1fr; gap: var(--space-1); }
   .posts { grid-template-columns: 1fr; }
+  .extracts__art { display: none; }
 }

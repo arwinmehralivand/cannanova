@@ -1,18 +1,14 @@
-<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sich überlagernde Kreise als Sinnbild für das Zusammenspiel von Cannabinoiden und Terpenen">
-  <rect width="1200" height="630" fill="#e3ebe0"/>
-  <g>
-    <circle cx="500" cy="300" r="180" fill="#27503a" opacity="0.55"/>
-    <circle cx="700" cy="300" r="180" fill="#4a7559" opacity="0.55"/>
-    <circle cx="600" cy="430" r="180" fill="#c9913f" opacity="0.45"/>
-  </g>
-  <g fill="#f6f1e7" font-family="Hanken Grotesk, Arial, sans-serif" font-weight="700" font-size="34" text-anchor="middle">
-    <text x="455" y="250">THC</text>
-    <text x="745" y="250">CBD</text>
-    <text x="600" y="470">Terpene</text>
-  </g>
-  <g stroke="#16321f" stroke-width="4" fill="none" opacity="0.7">
-    <path d="M150 150 q40 -50 80 0 q40 50 80 0" />
-    <path d="M150 190 q40 -50 80 0 q40 50 80 0" />
-  </g>
-  <text x="120" y="575" font-family="Hanken Grotesk, Arial, sans-serif" font-size="30" font-weight="600" fill="#13241b">Der Entourage-Effekt</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Drei überlappende Kreise für THC, CBD und Terpene">
+<rect width="1200" height="630" fill="#f3f5f2"/>
+<rect x="28" y="28" width="1144" height="574" rx="10" fill="none" stroke="#cfd8d2" stroke-width="2"/>
+<circle cx="80" cy="84" r="7" fill="#b8892e"/>
+<text x="100" y="91" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="19" letter-spacing="3" fill="#566159">CANNANOVA · WISSEN</text>
+<circle cx="770" cy="240" r="150" fill="#1f4a33" fill-opacity=".10" stroke="#1f4a33" stroke-width="4"/>
+<circle cx="960" cy="240" r="150" fill="#2f6a49" fill-opacity=".10" stroke="#2f6a49" stroke-width="4"/>
+<circle cx="865" cy="390" r="150" fill="#b8892e" fill-opacity=".16" stroke="#b8892e" stroke-width="4"/>
+<g font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="26" font-weight="500" text-anchor="middle"><text x="725" y="215" fill="#1f4a33">THC</text>
+<text x="1005" y="215" fill="#2f6a49">CBD</text><text x="865" y="470" fill="#b8892e">Terpene</text></g>
+<circle cx="865" cy="295" r="9" fill="#1f4a33"/>
+<text x="72" y="508" font-family="IBM Plex Mono, Menlo, Consolas, monospace" font-size="20" letter-spacing="3" fill="#566159">AUS DER FORSCHUNG</text>
+<text x="72" y="556" font-family="Hanken Grotesk, Helvetica Neue, Arial, sans-serif" font-size="38" font-weight="600" fill="#1f4a33">Der Entourage-Effekt</text>
 </svg>

@@ -747,6 +747,7 @@ p { margin: 0; }
   .section { padding-block: var(--space-8); }
   .site-footer__grid { grid-template-columns: 1fr; }
   .card { padding: var(--space-5); }
+  .post-card, .product-card { padding: 0; }
   .ledger__row { grid-template-columns: 1fr; }
   .ledger__item { border-left: 0; padding-left: 0; padding-block: var(--space-4); }
   .ledger__item + .ledger__item { padding-left: 0; border-top: var(--border-width) solid var(--color-border); }
@@ -755,3 +756,7 @@ p { margin: 0; }
   .steps__item + .steps__item { padding-left: 0; border-top: var(--border-width) solid var(--color-rule-on-dark); }
   .notice { padding: var(--space-5); }
 }
+
+/* Arrow link on the dark band */
+.link-arrow--light { color: var(--color-text-on-brand); }
+.link-arrow--light:hover { color: var(--color-signal); }
