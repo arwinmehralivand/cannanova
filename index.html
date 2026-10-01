@@ -5,25 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <!-- Primary SEO -->
-  <title>CannaNova – Apotheke für Medizinalcannabis | Nova Apotheke Langen</title>
-  <meta name="description" content="CannaNova: geprüfte Medizinalcannabis-Versorgung der Nova Apotheke Langen. Tagesaktueller Livebestand, faire Preise, DHL-Versand gegen gültige ärztliche Verordnung.">
+  <title>CannaNova – Medizinalcannabis-Apotheke | Nova Apotheke Langen</title>
+  <meta name="description" content="Medizinalcannabis aus der Nova Apotheke Langen: tagesaktueller Livebestand mit über 40 Sorten, transparente Preise, DHL-Versand oder Abholung. Jetzt Rezept einlösen.">
   <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://www.cannanova.de/">
+  <link rel="canonical" href="https://cannanova-langen.de/">
+  <meta name="theme-color" content="#1f4a33">
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="CannaNova – Apotheke für Medizinalcannabis">
-  <meta property="og:description" content="Geprüfte Qualität, faire Preise und persönliche pharmazeutische Beratung. Versand mit DHL gegen gültige ärztliche Verordnung.">
-  <meta property="og:url" content="https://www.cannanova.de/">
-  <meta property="og:image" content="https://www.cannanova.de/assets/og-image.png">
+  <meta property="og:title" content="CannaNova – Medizinalcannabis-Apotheke in Langen">
+  <meta property="og:description" content="Tagesaktueller Livebestand, transparente Preise und pharmazeutische Beratung. Versand mit DHL oder Abholung in Langen – gegen gültige ärztliche Verordnung.">
+  <meta property="og:url" content="https://cannanova-langen.de/">
+  <meta property="og:image" content="https://cannanova-langen.de/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="de_DE">
   <meta property="og:site_name" content="CannaNova">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CannaNova – Apotheke für Medizinalcannabis">
-  <meta name="twitter:description" content="Geprüfte Qualität, faire Preise und persönliche pharmazeutische Beratung. DHL-Versand gegen gültige ärztliche Verordnung.">
-  <meta name="twitter:image" content="https://www.cannanova.de/assets/og-image.png">
+  <meta name="twitter:title" content="CannaNova – Medizinalcannabis-Apotheke in Langen">
+  <meta name="twitter:description" content="Tagesaktueller Livebestand, transparente Preise und pharmazeutische Beratung – gegen gültige ärztliche Verordnung.">
+  <meta name="twitter:image" content="https://cannanova-langen.de/assets/og-image.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,54 +42,225 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/page-home.css">
 
-  <!-- Structured data -->
+  <!-- Preconnect to the shop API used by the Livebestand -->
+  <link rel="preconnect" href="https://shop.cannanova-langen.de" crossorigin>
+
+  <!-- Structured data (FAQPage is appended below the FAQ section) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "@id": "https://www.cannanova.de/#organization",
-        "name": "CannaNova",
-        "description": "Spezialisierter Bereich der Nova Apotheke Langen für die Versorgung mit cannabinoidhaltigen Arzneimitteln.",
-        "url": "https://www.cannanova.de/",
-        "parentOrganization": { "@type": "Pharmacy", "name": "Nova Apotheke Langen" }
+        "@type": "Pharmacy",
+        "@id": "https://cannanova-langen.de/#pharmacy",
+        "name": "CannaNova – Nova Apotheke Langen",
+        "description": "Spezialisierter Bereich der Nova Apotheke Langen für die Versorgung mit Medizinalcannabis.",
+        "url": "https://cannanova-langen.de/",
+        "image": "https://cannanova-langen.de/assets/og-image.png",
+        "logo": "https://cannanova-langen.de/assets/cannanova-logo.png",
+        "telephone": "+49 6103 3748430",
+        "email": "support@cannanova-langen.de",
+        "foundingDate": "2022",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bahnstraße 24",
+          "postalCode": "63225",
+          "addressLocality": "Langen",
+          "addressCountry": "DE"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 49.9893473, "longitude": 8.6719391 }
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.cannanova.de/#website",
-        "url": "https://www.cannanova.de/",
+        "@id": "https://cannanova-langen.de/#website",
+        "url": "https://cannanova-langen.de/",
         "name": "CannaNova",
         "inLanguage": "de-DE",
-        "publisher": { "@id": "https://www.cannanova.de/#organization" }
+        "publisher": { "@id": "https://cannanova-langen.de/#pharmacy" }
       }
     ]
   }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie löse ich mein Cannabis-Rezept ein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lege im Shop ein kostenloses Konto an und lade Dein E-Rezept (QR-Code) oder Papierrezept hoch. Bei Telemedizin übermittelt Dein Anbieter das Rezept direkt an uns, wenn Du dort CannaNova – Nova Apotheke Langen als Apotheke auswählst."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich ohne Rezept bestellen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Medizinalcannabis ist verschreibungspflichtig. Eine Belieferung erfolgt ausschließlich gegen eine gültige ärztliche Verordnung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange ist mein Rezept gültig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seit Medizinalcannabis kein Betäubungsmittel mehr ist, gelten die üblichen Fristen: Kassenrezepte sind in der Regel 28 Tage, Privatrezepte drei Monate ab Ausstellung einlösbar. Reiche Dein Rezept am besten zeitnah ein."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was bedeutet der Livebestand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Der Livebestand zeigt tagesaktuell, welche Sorten bei uns lieferbar sind – mit Wirkstoffgehalt, Terpenen und Preis. So siehst Du vor dem Einlösen, ob Deine Medikation verfügbar ist."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gibt es eine Mindestbestellmenge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Die Mindestbestellmenge beträgt 5 Gramm pro Sorte. Darüber hinaus richtet sich die Abgabemenge nach Deiner ärztlichen Verordnung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kostet der Versand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Versandkosten hängen von der Versandart ab: DHL Standard und DHL Express werden zu unterschiedlichen Konditionen angeboten. Die genaue Pauschale siehst Du vor Abschluss Deiner Bestellung im Shop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich meine Bestellung in der Apotheke abholen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Wähle im Shop die Abholung, dann holst Du Deine Bestellung in der Nova Apotheke, Bahnstraße 24, 63225 Langen ab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mein Paket ist beschädigt angekommen – was tun?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dokumentiere den Schaden sofort mit Fotos und melde ihn zuerst DHL (Schadensmeldung). Lässt sich das darüber nicht klären, schreib uns an support@cannanova-langen.de und füge die Fotos sowie die unterschriebene „Empfängererklärung“ bei."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mein Paket wurde gestohlen oder nicht zugestellt",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prüfe die Sendungsverfolgung und frage bei Nachbar:innen, in der Filiale oder an der Packstation nach. Melde den Verlust bei DHL. Bleibt die Sendung verschwunden, schreib uns an support@cannanova-langen.de und lege die unterschriebene „Empfängererklärung“ bei."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Der Sendungsstatus ändert sich seit Tagen nicht",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wende Dich zuerst mit Deiner Sendungsnummer an den DHL-Kundenservice. Hilft das nicht weiter, schreib uns an support@cannanova-langen.de – mit Sendungsnummer und der unterschriebenen „Empfängererklärung“."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist Medizinalcannabis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cannabinoidhaltige Arzneimittel – etwa getrocknete Blüten oder Extrakte –, die in pharmazeutischer Qualität hergestellt und geprüft werden. Sie enthalten Wirkstoffe wie THC und CBD und werden nur gegen ärztliche Verordnung abgegeben."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie wird Medizinalcannabis angewendet und dosiert?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anwendung und Dosierung legt Deine behandelnde Ärztin oder Dein behandelnder Arzt individuell fest. Blüten werden meist mit einem Verdampfer inhaliert, Extrakte eingenommen. Halte Dich an die ärztliche Anweisung; dieser Text ersetzt keine ärztliche Beratung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was bedeutet „bestrahlt“ und „unbestrahlt“?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Manche Blüten werden nach der Ernte bestrahlt, um die mikrobielle Belastung zu senken. Bestrahlte und unbestrahlte Blüten erfüllen beide die pharmazeutischen Anforderungen. Manche Patient:innen bevorzugen unbestrahlte Ware – im Livebestand kannst Du danach filtern."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum unterscheiden sich Sorten und Chargen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cannabis ist ein Naturprodukt. Wirkstoffgehalt, Terpenprofil, Aussehen und Aroma schwanken je nach Sorte, Anbau, Ernte und Charge – bei gleichbleibenden Qualitätsstandards (GACP/GMP). Jede Charge wird geprüft."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lagere ich Medizinalcannabis richtig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kühl (etwa 15–20 °C), dunkel und luftdicht, am besten in einem verschlossenen Glas – und außerhalb der Reichweite von Kindern. Mehr im Beitrag zur Lagerung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist der Versand nach der geplanten Gesetzesänderung noch erlaubt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, Stand Ende September 2026. Der Entwurf zur Änderung des Medizinal-Cannabisgesetzes ist noch nicht beschlossen. Bis dahin bleiben Telemedizin-Rezepte und der Versand durch Apotheken zulässig. Abholung und Botendienst wären auch nach dem Entwurf weiter möglich."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Darf ich mit Medizinalcannabis Auto fahren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wer ein ärztlich verordnetes Cannabis-Arzneimittel bestimmungsgemäß einnimmt, ist vom THC-Grenzwert ausgenommen – aber nur, wenn die Fahrtüchtigkeit nicht beeinträchtigt ist. Sprich das mit Deiner Ärztin oder Deinem Arzt ab und führe einen Nachweis der Verordnung mit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Übernimmt die Krankenkasse die Kosten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das entscheidet Deine Krankenkasse im Einzelfall, meist nach vorherigem Antrag. Sprich dazu mit Deiner Ärztin oder Deinem Arzt."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 
 <body>
+  <!-- Brand mark, defined once and reused via <use>. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="cn-mark" viewBox="0 0 200 210"><ellipse cx="100" cy="100" rx="95" ry="95" fill="none" stroke="currentColor" stroke-width="4" opacity="0.42" transform="rotate(-16 100 100)"/><circle cx="169" cy="47" r="8.5" fill="currentColor"/><path d="M0,0 C -25.08,-63.84 -12.54,-139.84 0,-152 C 12.54,-139.84 25.08,-63.84 0,0 Z" transform="translate(100,182)" fill="currentColor"/><path d="M0,0 C -21.57,-54.9 -10.78,-120.26 0,-130.72 C 10.78,-120.26 21.57,-54.9 0,0 Z" transform="translate(100,182) rotate(25)" fill="currentColor"/><path d="M0,0 C -21.57,-54.9 -10.78,-120.26 0,-130.72 C 10.78,-120.26 21.57,-54.9 0,0 Z" transform="translate(100,182) rotate(-25)" fill="currentColor"/><path d="M0,0 C -16.30,-41.5 -8.15,-90.9 0,-98.8 C 8.15,-90.9 16.30,-41.5 0,0 Z" transform="translate(100,182) rotate(52)" fill="currentColor"/><path d="M0,0 C -16.30,-41.5 -8.15,-90.9 0,-98.8 C 8.15,-90.9 16.30,-41.5 0,0 Z" transform="translate(100,182) rotate(-52)" fill="currentColor"/><path d="M0,0 C -10.28,-26.17 -5.14,-57.33 0,-62.32 C 5.14,-57.33 10.28,-26.17 0,0 Z" transform="translate(100,182) rotate(80)" fill="currentColor"/><path d="M0,0 C -10.28,-26.17 -5.14,-57.33 0,-62.32 C 5.14,-57.33 10.28,-26.17 0,0 Z" transform="translate(100,182) rotate(-80)" fill="currentColor"/><rect x="96.5" y="182" width="7" height="20" rx="3.5" fill="currentColor"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
   <!-- ===================== HEADER ===================== -->
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="/" aria-label="CannaNova – Startseite">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg"><ellipse cx="100" cy="100" rx="95" ry="95" fill="none" stroke="currentColor" stroke-width="4" opacity="0.42" transform="rotate(-16 100 100)"/><circle cx="169" cy="47" r="8.5" fill="currentColor"/><path d="M0,0 C -25.08,-63.84 -12.54,-139.84 0,-152 C 12.54,-139.84 25.08,-63.84 0,0 Z" transform="translate(100,182) rotate(0)" fill="currentColor"/><path d="M0,0 C -21.57,-54.9 -10.78,-120.26 0,-130.72 C 10.78,-120.26 21.57,-54.9 0,0 Z" transform="translate(100,182) rotate(25)" fill="currentColor"/><path d="M0,0 C -21.57,-54.9 -10.78,-120.26 0,-130.72 C 10.78,-120.26 21.57,-54.9 0,0 Z" transform="translate(100,182) rotate(-25)" fill="currentColor"/><path d="M0,0 C -16.30,-41.5 -8.15,-90.9 0,-98.8 C 8.15,-90.9 16.30,-41.5 0,0 Z" transform="translate(100,182) rotate(52)" fill="currentColor"/><path d="M0,0 C -16.30,-41.5 -8.15,-90.9 0,-98.8 C 8.15,-90.9 16.30,-41.5 0,0 Z" transform="translate(100,182) rotate(-52)" fill="currentColor"/><path d="M0,0 C -10.28,-26.17 -5.14,-57.33 0,-62.32 C 5.14,-57.33 10.28,-26.17 0,0 Z" transform="translate(100,182) rotate(80)" fill="currentColor"/><path d="M0,0 C -10.28,-26.17 -5.14,-57.33 0,-62.32 C 5.14,-57.33 10.28,-26.17 0,0 Z" transform="translate(100,182) rotate(-80)" fill="currentColor"/><rect x="96.5" y="182" width="7" height="20" rx="3.5" fill="currentColor"/></svg>
-        </span>
+        <span class="brand__mark" aria-hidden="true"><svg><use href="#cn-mark"/></svg></span>
         <span class="brand__lockup">
           <span class="brand__name"><span class="brand__name-canna">CANNA</span>NOVA</span>
           <span class="brand__sub">Langen</span>
         </span>
       </a>
       <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
-        <a href="#so-funktioniert">So funktioniert's</a>
         <a href="#livebestand">Livebestand</a>
+        <a href="#so-gehts">So geht's</a>
         <a href="#sorten">Sorten</a>
-        <a href="#extrakte">Extrakte</a>
-        <a href="#partner">Partner</a>
         <a href="#wissen">Wissen</a>
         <a href="#faq">FAQ</a>
         <a href="#kontakt">Kontakt</a>
+        <a class="btn btn--primary site-nav__cta" href="https://shop.cannanova-langen.de" target="_blank" rel="noopener">Zum Shop</a>
       </nav>
       <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
@@ -90,31 +268,32 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- ===================== HERO ===================== -->
     <section class="section hero" aria-labelledby="hero-title">
       <div class="container hero__grid">
         <div class="hero__copy">
-          <p class="hero__label"><span>Nova Apotheke Langen</span><span aria-hidden="true">·</span><span>Medizinalcannabis</span><span aria-hidden="true">·</span><span>seit 2022</span></p>
+          <p class="hero__label"><span>Nova Apotheke Langen</span><span aria-hidden="true">·</span><span>seit 2022</span></p>
           <h1 id="hero-title">Deine Apotheke für Medizinalcannabis.</h1>
           <p class="lead hero__lead">
-            Geprüfte Qualität, faire Preise und persönliche pharmazeutische Beratung.
-            Versand mit DHL – schnell und zuverlässig direkt zu Dir. Belieferung
+            Tagesaktueller Bestand, transparente Preise und pharmazeutische
+            Beratung aus Langen. Versand mit DHL oder Abholung vor Ort –
             ausschließlich gegen gültige ärztliche Verordnung.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#livebestand">Zum Livebestand</a>
-            <a class="btn btn--secondary" href="#so-funktioniert">So funktioniert's</a>
+            <a class="btn btn--primary" href="https://shop.cannanova-langen.de" target="_blank" rel="noopener">Rezept einlösen</a>
+            <a class="btn btn--secondary" href="#livebestand">Livebestand ansehen</a>
           </div>
-          <p class="fine-print">
-            Verschreibungspflichtiges Arzneimittel. Belieferung nur gegen
-            gültige ärztliche Verordnung.
-          </p>
+          <dl class="hero__stats" id="hero-stats" aria-live="polite">
+            <div><dt>Sorten verfügbar</dt><dd data-stat="count">–</dd></div>
+            <div><dt>Preis ab</dt><dd data-stat="min">–</dd></div>
+            <div><dt>Bestand aktualisiert</dt><dd data-stat="updated">–</dd></div>
+          </dl>
         </div>
 
         <aside class="spec spec--loading" id="hero-spec" aria-label="Neuestes Produkt im Livebestand" aria-live="polite">
           <div class="spec__head">
-            <span class="spec__live"><span class="live-dot" aria-hidden="true"></span>Livebestand · heute</span>
+            <span class="spec__live"><span class="live-dot" aria-hidden="true"></span>Livebestand</span>
             <span class="spec__id">Neu im Sortiment</span>
           </div>
           <div class="spec__body">
@@ -124,7 +303,8 @@
               <div><dt>Genetik</dt><dd>—</dd></div>
               <div><dt>THC</dt><dd>—</dd></div>
               <div><dt>CBD</dt><dd>—</dd></div>
-              <div><dt>Hersteller</dt><dd>—</dd></div>
+              <div><dt>Herkunft</dt><dd>—</dd></div>
+              <div class="spec__wide"><dt>Terpene</dt><dd>—</dd></div>
             </dl>
             <div class="spec__foot">
               <span class="spec__price">—</span>
@@ -138,63 +318,93 @@
     <!-- ===================== FACTS LEDGER ===================== -->
     <section class="ledger" aria-label="Fakten zur Apotheke">
       <div class="container ledger__row">
-        <div class="ledger__item"><span class="ledger__key">Apotheke</span><strong>Nova Apotheke Langen, geprüft</strong></div>
+        <div class="ledger__item"><span class="ledger__key">Apotheke</span><strong>Nova Apotheke Langen, seit 2022</strong></div>
         <div class="ledger__item"><span class="ledger__key">Qualität</span><strong>GACP/GMP-geprüfte Chargen</strong></div>
         <div class="ledger__item"><span class="ledger__key">Patient:innen</span><strong>Über 75.000 versorgt</strong></div>
-        <div class="ledger__item"><span class="ledger__key">Versand</span><strong>DHL, schnell und diskret</strong></div>
+        <div class="ledger__item"><span class="ledger__key">Lieferung</span><strong>DHL-Versand oder Abholung</strong></div>
       </div>
     </section>
 
     <!-- ===================== LIVE INVENTORY ===================== -->
     <section class="section" id="livebestand" aria-labelledby="inventory-title">
       <div class="container">
-        <div class="section__head">
-          <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Livebestand · tagesaktuell</p>
-          <h2 id="inventory-title">Neu im Sortiment</h2>
+        <div class="section__head section__head--split">
+          <div>
+            <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Livebestand · tagesaktuell</p>
+            <h2 id="inventory-title">Was heute lieferbar ist</h2>
+          </div>
           <p class="lead">
-            Unsere zuletzt aufgenommenen Produkte – tagesaktuell aus unserem
-            Apothekenbestand. Belieferung ausschließlich gegen gültige ärztliche
-            Verordnung.
+            Direkt aus unserem Apothekenbestand. Filtere nach Genetik,
+            THC-Gehalt oder Behandlung – bestellt wird im Shop mit Deinem Rezept.
           </p>
         </div>
+
+        <div class="filters" id="inventory-filters" aria-label="Livebestand filtern">
+          <div class="filters__group" role="group" aria-label="Genetik">
+            <span class="filters__label">Genetik</span>
+            <div class="chips" data-filter="genetic">
+              <button type="button" class="chip" data-value="all" aria-pressed="true">Alle</button>
+              <button type="button" class="chip" data-value="indica" aria-pressed="false">Indica</button>
+              <button type="button" class="chip" data-value="hybridIndicaDominant" aria-pressed="false">Indica-dominant</button>
+              <button type="button" class="chip" data-value="hybrid" aria-pressed="false">Hybrid</button>
+              <button type="button" class="chip" data-value="hybridSativaDominant" aria-pressed="false">Sativa-dominant</button>
+              <button type="button" class="chip" data-value="sativa" aria-pressed="false">Sativa</button>
+            </div>
+          </div>
+          <div class="filters__group" role="group" aria-label="THC-Gehalt">
+            <span class="filters__label">THC</span>
+            <div class="chips" data-filter="thc">
+              <button type="button" class="chip" data-value="all" aria-pressed="true">Alle</button>
+              <button type="button" class="chip" data-value="low" aria-pressed="false">unter 20 %</button>
+              <button type="button" class="chip" data-value="mid" aria-pressed="false">20–24 %</button>
+              <button type="button" class="chip" data-value="high" aria-pressed="false">ab 25 %</button>
+            </div>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="filter-unirradiated">
+            <span>Nur unbestrahlte Blüten</span>
+          </label>
+        </div>
+
+        <p class="inventory__count" id="inventory-count" aria-live="polite"></p>
         <!-- Populated client-side from the pharmacy shop API (js/livebestand.js) -->
-        <div class="grid grid--3 inventory" id="livebestand-grid" aria-live="polite"></div>
+        <div class="grid inventory" id="livebestand-grid"></div>
         <div class="inventory__more">
-          <a class="btn btn--primary" href="https://shop.cannanova-langen.de/products" target="_blank" rel="noopener">Vollständigen Livebestand ansehen</a>
-          <p class="fine-print inventory__more-note">Alle aktuell verfügbaren Sorten und Produkte – tagesaktuell im Shop filterbar.</p>
+          <button type="button" class="btn btn--secondary" id="inventory-more" hidden>Weitere Sorten anzeigen</button>
+          <a class="link-arrow" href="https://shop.cannanova-langen.de/products" target="_blank" rel="noopener">Gesamten Bestand im Shop öffnen</a>
         </div>
       </div>
     </section>
 
-    <!-- ===================== HOW IT WORKS ===================== -->
-    <section class="section section--dark" id="so-funktioniert" aria-labelledby="how-title">
+    <!-- ===================== TWO PATHS ===================== -->
+    <section class="section section--dark" id="so-gehts" aria-labelledby="paths-title">
       <div class="container">
         <div class="section__head">
-          <p class="eyebrow">So funktioniert es</p>
-          <h2 id="how-title">In vier Schritten zu Deiner Medikation</h2>
+          <p class="eyebrow">So geht's</p>
+          <h2 id="paths-title">Zwei Wege zu Deiner Medikation</h2>
         </div>
-        <ol class="steps">
-          <li class="steps__item">
-            <span class="steps__index" aria-hidden="true">01</span>
-            <h3 class="steps__title">Konto erstellen</h3>
-            <p class="steps__text">Erstelle Dein Konto <a href="https://shop.cannanova-langen.de" target="_blank" rel="noopener">direkt im Shop</a> in wenigen Schritten – kostenlos und unkompliziert.</p>
-          </li>
-          <li class="steps__item">
-            <span class="steps__index" aria-hidden="true">02</span>
-            <h3 class="steps__title">Rezept anfordern</h3>
-            <p class="steps__text">Lass Dir von Deiner Ärztin oder Deinem Arzt – auch über eine Telemedizin-Plattform – ein Rezept ausstellen. Wähle dort als Apotheke <strong>CannaNova – Nova Apotheke Langen</strong> aus, damit Dein Rezept direkt bei uns eingeht.</p>
-          </li>
-          <li class="steps__item">
-            <span class="steps__index" aria-hidden="true">03</span>
-            <h3 class="steps__title">Rezept einlösen</h3>
-            <p class="steps__text">Lade Dein E-Rezept (QR-Code) oder Papierrezept hoch und schließe Deine Bestellung mit der Zahlung ab. Bei Telemedizin übermittelt Dein Anbieter das Rezept direkt an uns.</p>
-          </li>
-          <li class="steps__item">
-            <span class="steps__index" aria-hidden="true">04</span>
-            <h3 class="steps__title">Versand</h3>
-            <p class="steps__text">Nach Zahlungseingang übergeben wir Deine Bestellung schnellstmöglich an DHL – inkl. Sendungsnummer.</p>
-          </li>
-        </ol>
+        <div class="paths">
+          <article class="path">
+            <p class="path__kicker">Du hast bereits ein Rezept</p>
+            <h3 class="path__title">Rezept einlösen</h3>
+            <ol class="path__steps">
+              <li><strong>Konto anlegen</strong> – kostenlos <a href="https://shop.cannanova-langen.de" target="_blank" rel="noopener">im Shop</a>.</li>
+              <li><strong>Rezept hochladen</strong> – E-Rezept (QR-Code) oder Papierrezept. Bei Telemedizin übermittelt der Anbieter es direkt an uns.</li>
+              <li><strong>Bezahlen und erhalten</strong> – per DHL mit Sendungsnummer oder zur Abholung in Langen.</li>
+            </ol>
+            <a class="btn btn--signal" href="https://shop.cannanova-langen.de" target="_blank" rel="noopener">Rezept im Shop einlösen</a>
+          </article>
+          <article class="path">
+            <p class="path__kicker">Du brauchst noch ein Rezept</p>
+            <h3 class="path__title">Rezept anfordern</h3>
+            <ol class="path__steps">
+              <li><strong>Ärztlich beraten lassen</strong> – in der Praxis oder über eine Telemedizin-Plattform.</li>
+              <li><strong>Apotheke wählen</strong> – gib beim Ausstellen <em>CannaNova – Nova Apotheke Langen</em> an, dann geht das Rezept direkt an uns.</li>
+              <li><strong>Wir übernehmen</strong> – Prüfung, Beratung und Versand oder Abholung.</li>
+            </ol>
+            <a class="btn btn--ghost-light" href="#kontakt">Fragen? Wir beraten Dich</a>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -205,62 +415,85 @@
           <p class="eyebrow">Cannabisblüten verstehen</p>
           <h2 id="strains-title">Indica, Sativa &amp; Hybride</h2>
           <p class="lead">
-            Jede Sorte hat ihre Besonderheiten. Der sogenannte Entourage-Effekt
-            beschreibt das synergetische Zusammenwirken von Cannabinoiden,
-            Terpenen und Flavonoiden. Klicke eine Sorte an, um den Livebestand
-            danach zu filtern.
+            Die Genetik ist eine erste Orientierung, entscheidend für die Wirkung
+            sind aber Wirkstoffgehalt und Terpenprofil. Wähle eine Gruppe, um den
+            Livebestand direkt danach zu filtern.
           </p>
         </div>
 
-        <div class="grid grid--3 strains">
-          <article class="card card--accent" style="--accent: var(--color-strain-indica);">
-            <h3 class="card__title">Indica</h3>
-            <p class="card__text">Kurz und buschig, ursprünglich aus Regionen wie Afghanistan. Bekannt für eine eher beruhigende, körperbetonte Wirkung – oft zur Entspannung und am Abend.</p>
-            <a class="link-arrow" href="#livebestand">Im Livebestand filtern</a>
-          </article>
-          <article class="card card--accent" style="--accent: var(--color-strain-indica);">
-            <h3 class="card__title">Hybrid · Indica-dominant</h3>
-            <p class="card__text">Hybride mit höherem Indica-Anteil: entspannende Effekte mit leicht anregenden Akzenten.</p>
-            <a class="link-arrow" href="#livebestand">Im Livebestand filtern</a>
-          </article>
-          <article class="card card--accent" style="--accent: var(--color-strain-hybrid);">
-            <h3 class="card__title">Hybrid</h3>
-            <p class="card__text">Kreuzung aus Indica und Sativa. Kombiniert beide Eigenschaften zu einer ausgewogenen Wirkung.</p>
-            <a class="link-arrow" href="#livebestand">Im Livebestand filtern</a>
-          </article>
-          <article class="card card--accent" style="--accent: var(--color-strain-sativa);">
-            <h3 class="card__title">Hybrid · Sativa-dominant</h3>
-            <p class="card__text">Hybride mit höherem Sativa-Anteil: belebender, mit sanfter Balance aus Energie und Entspannung.</p>
-            <a class="link-arrow" href="#livebestand">Im Livebestand filtern</a>
-          </article>
-          <article class="card card--accent" style="--accent: var(--color-strain-sativa);">
-            <h3 class="card__title">Sativa</h3>
-            <p class="card__text">Hoch und schlank, aus wärmeren Klimazonen. Eher zerebrale Wirkung, häufig mit Energie und Klarheit verbunden – oft tagsüber.</p>
-            <a class="link-arrow" href="#livebestand">Im Livebestand filtern</a>
-          </article>
+        <div class="strains">
+          <a class="strain" href="#livebestand" data-set-genetic="indica" style="--accent: var(--color-strain-indica);">
+            <span class="strain__name">Indica</span>
+            <span class="strain__text">Kompakter Wuchs, ursprünglich aus Regionen wie Afghanistan. Häufig mit einer eher beruhigenden, körperbetonten Wirkung beschrieben.</span>
+            <span class="strain__count" data-count-for="indica"></span>
+          </a>
+          <a class="strain" href="#livebestand" data-set-genetic="hybridIndicaDominant" style="--accent: var(--color-strain-indica);">
+            <span class="strain__name">Indica-dominant</span>
+            <span class="strain__text">Hybride mit höherem Indica-Anteil: überwiegend entspannend, mit leicht anregenden Akzenten.</span>
+            <span class="strain__count" data-count-for="hybridIndicaDominant"></span>
+          </a>
+          <a class="strain" href="#livebestand" data-set-genetic="hybrid" style="--accent: var(--color-strain-hybrid);">
+            <span class="strain__name">Hybrid</span>
+            <span class="strain__text">Kreuzung aus Indica und Sativa, die Eigenschaften beider Linien verbindet.</span>
+            <span class="strain__count" data-count-for="hybrid"></span>
+          </a>
+          <a class="strain" href="#livebestand" data-set-genetic="hybridSativaDominant" style="--accent: var(--color-strain-sativa);">
+            <span class="strain__name">Sativa-dominant</span>
+            <span class="strain__text">Hybride mit höherem Sativa-Anteil: eher belebend, mit ausgleichender Komponente.</span>
+            <span class="strain__count" data-count-for="hybridSativaDominant"></span>
+          </a>
+          <a class="strain" href="#livebestand" data-set-genetic="sativa" style="--accent: var(--color-strain-sativa);">
+            <span class="strain__name">Sativa</span>
+            <span class="strain__text">Hoher, schlanker Wuchs aus wärmeren Klimazonen. Häufig mit einer eher anregenden, klaren Wirkung beschrieben.</span>
+            <span class="strain__count" data-count-for="sativa"></span>
+          </a>
         </div>
 
         <p class="fine-print strains__note">
-          Hinweis: Diese Angaben beruhen auf allgemeinen Informationen und
-          Erfahrungsberichten und ersetzen keine ärztliche oder pharmazeutische
-          Beratung. Die Therapieentscheidung trifft ausschließlich Deine Ärztin
-          oder Dein Arzt.
+          Diese Angaben beruhen auf allgemeinen Informationen und Erfahrungsberichten
+          und ersetzen keine ärztliche oder pharmazeutische Beratung. Die
+          Therapieentscheidung trifft ausschließlich Deine Ärztin oder Dein Arzt.
         </p>
       </div>
     </section>
 
-    <!-- ===================== EXTRACTS (coming soon) ===================== -->
+    <!-- ===================== LAW STATUS ===================== -->
+    <section class="section section--alt" id="rechtslage" aria-labelledby="law-title">
+      <div class="container law">
+        <div class="law__intro">
+          <p class="eyebrow">Rechtslage · Stand Ende September 2026</p>
+          <h2 id="law-title">Was die geplante Gesetzesänderung für Dich bedeutet</h2>
+          <p class="lead">
+            Rund um das Medizinal-Cannabisgesetz gibt es viel Unsicherheit. Hier
+            der aktuelle Stand – wir aktualisieren ihn, sobald sich etwas ändert.
+          </p>
+          <a class="link-arrow" href="blog/medizinal-cannabisgesetz-aenderungen-2026.html">Ausführlich im Beitrag</a>
+        </div>
+        <ol class="law__timeline">
+          <li>
+            <span class="law__date">1. April 2024</span>
+            <p><strong>Kein Betäubungsmittel mehr.</strong> Medizinalcannabis wird seitdem auf einem normalen Rezept bzw. E-Rezept verordnet.</p>
+          </li>
+          <li>
+            <span class="law__date">8. Oktober 2025</span>
+            <p><strong>Kabinettsentwurf.</strong> Geplant sind Erstverordnungen nur nach persönlichem Arztkontakt und ein Versandverbot für Blüten. Der Botendienst von Apotheken bliebe erlaubt.</p>
+          </li>
+          <li class="law__now">
+            <span class="law__date">Heute</span>
+            <p><strong>Noch nicht beschlossen.</strong> Der Entwurf liegt im Gesundheitsausschuss des Bundestages. Telemedizin-Rezepte und Versand durch Apotheken sind weiterhin zulässig.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== EXTRACTS ===================== -->
     <section class="section" id="extrakte" aria-labelledby="extracts-title">
       <div class="container">
-        <div class="section__head">
-          <p class="eyebrow">Extrakte</p>
-          <h2 id="extracts-title">Cannabis-Extrakte</h2>
-        </div>
         <div class="notice">
-          <p class="eyebrow">Demnächst</p>
-          <h3 class="notice__title">Cannabis-Extrakte folgen.</h3>
-          <p class="notice__text">Wir bereiten ein sorgfältig ausgewähltes Sortiment an Extrakten vor. Wenn wir Dich informieren sollen, sobald es losgeht, melde Dich bei uns.</p>
-          <a class="btn btn--secondary" href="#kontakt">Benachrichtigt werden</a>
+          <p class="eyebrow">Extrakte · demnächst</p>
+          <h2 class="notice__title" id="extracts-title">Cannabis-Extrakte folgen.</h2>
+          <p class="notice__text">Wir stellen gerade ein sorgfältig ausgewähltes Sortiment an Extrakten zusammen. Wenn wir Dich informieren sollen, sobald es losgeht, schreib uns kurz.</p>
+          <a class="btn btn--secondary" href="mailto:support@cannanova-langen.de?subject=Benachrichtigung%20Extrakte">Benachrichtigung anfordern</a>
         </div>
       </div>
     </section>
@@ -269,86 +502,71 @@
     <section class="section section--alt" id="partner" aria-labelledby="partners-title">
       <div class="container">
         <div class="section__head">
-          <p class="eyebrow">Industrie-Partner</p>
-          <h2 id="partners-title">Unsere Hersteller &amp; ihre Produkte</h2>
-          <p class="lead">
-            Wir beliefern Sie mit geprüften Produkten führender Hersteller.
-          </p>
+          <p class="eyebrow">Hersteller</p>
+          <h2 id="partners-title">Produkte führender Hersteller</h2>
         </div>
         <div class="partners">
-          <div class="partners__logo"><img src="assets/partners/demecan.jpeg" alt="Demecan" loading="lazy"></div>
-          <div class="partners__logo"><img src="assets/partners/four20pharma.png" alt="Four20 Pharma" loading="lazy"></div>
-          <div class="partners__logo"><img src="assets/partners/remexian.png" alt="Remexian" loading="lazy"></div>
-          <div class="partners__logo"><img src="assets/partners/mgf.jpg" alt="MGF" loading="lazy"></div>
-          <div class="partners__logo"><img src="assets/partners/pineappletreecann.png" alt="PineAppleTreeCann" loading="lazy"></div>
-          <div class="partners__logo"><img src="assets/partners/bathera.png" alt="Bathera" loading="lazy"></div>
-          <div class="partners__logo"><img src="assets/partners/aurora.png" alt="Aurora" loading="lazy"></div>
-          <div class="partners__logo"><img src="assets/partners/avaay.webp" alt="avaay" loading="lazy"></div>
+          <div class="partners__logo"><img src="assets/partners/demecan.jpeg" alt="Demecan" width="200" height="200" loading="lazy"></div>
+          <div class="partners__logo"><img src="assets/partners/four20pharma.png" alt="Four20 Pharma" width="596" height="335" loading="lazy"></div>
+          <div class="partners__logo"><img src="assets/partners/remexian.png" alt="Remexian" width="713" height="206" loading="lazy"></div>
+          <div class="partners__logo"><img src="assets/partners/mgf.jpg" alt="MGF" width="1091" height="1028" loading="lazy"></div>
+          <div class="partners__logo"><img src="assets/partners/pineappletreecann.png" alt="PineAppleTreeCann" width="300" height="183" loading="lazy"></div>
+          <div class="partners__logo"><img src="assets/partners/bathera.png" alt="Bathera" width="1000" height="305" loading="lazy"></div>
+          <div class="partners__logo"><img src="assets/partners/aurora.png" alt="Aurora" width="766" height="400" loading="lazy"></div>
+          <div class="partners__logo"><img src="assets/partners/avaay.webp" alt="avaay" width="2518" height="1142" loading="lazy"></div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== BLOG / RESEARCH ===================== -->
+    <!-- ===================== KNOWLEDGE ===================== -->
     <section class="section" id="wissen" aria-labelledby="blog-title">
       <div class="container">
         <div class="section__head">
           <p class="eyebrow">Wissen &amp; Forschung</p>
-          <h2 id="blog-title">Blog, Gesundheitstipps &amp; Studienlage</h2>
+          <h2 id="blog-title">Gut informiert in die Therapie</h2>
         </div>
-        <div class="grid grid--3">
-          <article class="card post-card">
+        <div class="posts">
+          <article class="card post-card post-card--feature">
             <a class="post-card__media" href="blog/cannabis-chronische-schmerzen-studienlage.html" aria-hidden="true" tabindex="-1">
               <img src="assets/blog/schmerzforschung.svg" alt="" width="1200" height="630" loading="lazy">
             </a>
             <div class="post-card__body">
-              <p class="step__label">Aus der Forschung</p>
+              <p class="step__label">Aus der Forschung · 6 Min.</p>
               <h3 class="post-card__title"><a class="post-card__link" href="blog/cannabis-chronische-schmerzen-studienlage.html">Cannabis bei chronischen Schmerzen: Was die aktuelle Studienlage zeigt</a></h3>
-              <p class="post-card__excerpt">Ein systematischer Review von 2025 hat 25 kontrollierte Studien ausgewertet. Wir ordnen ein, wie stark die Evidenz wirklich ist – und wo ihre Grenzen liegen.</p>
-              <a class="link-arrow" href="blog/cannabis-chronische-schmerzen-studienlage.html">Mehr lesen</a>
+              <p class="post-card__excerpt">Ein systematischer Review hat 25 kontrollierte Studien ausgewertet. Was sie über die Wirkung zeigen – und warum die individuelle Einstellung entscheidend ist.</p>
+              <a class="link-arrow" href="blog/cannabis-chronische-schmerzen-studienlage.html">Beitrag lesen</a>
             </div>
           </article>
           <article class="card post-card">
-            <a class="post-card__media" href="blog/cannabis-entzuendungshemmende-wirkung.html" aria-hidden="true" tabindex="-1">
-              <img src="assets/blog/entzuendung.svg" alt="" width="1200" height="630" loading="lazy">
-            </a>
             <div class="post-card__body">
-              <p class="step__label">Aus der Forschung</p>
-              <h3 class="post-card__title"><a class="post-card__link" href="blog/cannabis-entzuendungshemmende-wirkung.html">Cannabis und Entzündungen: Was hinter der entzündungshemmenden Wirkung steckt</a></h3>
-              <p class="post-card__excerpt">Über CB2-Rezeptoren kann Cannabis in Entzündungsprozesse eingreifen. Wir erklären den Mechanismus, die aktuelle Evidenz und was das für Dich bedeutet.</p>
-              <a class="link-arrow" href="blog/cannabis-entzuendungshemmende-wirkung.html">Mehr lesen</a>
-            </div>
-          </article>
-          <article class="card post-card">
-            <a class="post-card__media" href="blog/entourage-effekt-terpene-cannabinoide.html" aria-hidden="true" tabindex="-1">
-              <img src="assets/blog/entourage-effekt.svg" alt="" width="1200" height="630" loading="lazy">
-            </a>
-            <div class="post-card__body">
-              <p class="step__label">Aus der Forschung</p>
-              <h3 class="post-card__title"><a class="post-card__link" href="blog/entourage-effekt-terpene-cannabinoide.html">Der Entourage-Effekt: Wie Cannabinoide und Terpene zusammenwirken</a></h3>
-              <p class="post-card__excerpt">Vollspektrum oder Isolat? Wir erklären die Theorie hinter dem Entourage-Effekt und fassen zusammen, was aktuelle Forschung belegt – und was offen bleibt.</p>
-              <a class="link-arrow" href="blog/entourage-effekt-terpene-cannabinoide.html">Mehr lesen</a>
-            </div>
-          </article>
-          <article class="card post-card">
-            <a class="post-card__media" href="blog/medizinal-cannabisgesetz-aenderungen-2026.html" aria-hidden="true" tabindex="-1">
-              <img src="assets/blog/cannabisgesetz.svg" alt="" width="1200" height="630" loading="lazy">
-            </a>
-            <div class="post-card__body">
-              <p class="step__label">Aktuelles &amp; Recht</p>
+              <p class="step__label">Aktuelles &amp; Recht · 5 Min.</p>
               <h3 class="post-card__title"><a class="post-card__link" href="blog/medizinal-cannabisgesetz-aenderungen-2026.html">Medizinal-Cannabisgesetz: Was sich für Patient:innen ändert</a></h3>
-              <p class="post-card__excerpt">Seit dem Cannabisgesetz 2024 ist Medizinalcannabis kein Betäubungsmittel mehr. Wir fassen die geplante Novelle und ihre Folgen für die Versorgung zusammen.</p>
-              <a class="link-arrow" href="blog/medizinal-cannabisgesetz-aenderungen-2026.html">Mehr lesen</a>
+              <p class="post-card__excerpt">Der Stand der geplanten Novelle – und was bis zu einer Entscheidung gilt.</p>
+              <a class="link-arrow" href="blog/medizinal-cannabisgesetz-aenderungen-2026.html">Beitrag lesen</a>
             </div>
           </article>
           <article class="card post-card">
-            <a class="post-card__media" href="blog/cannabisblueten-richtig-lagern.html" aria-hidden="true" tabindex="-1">
-              <img src="assets/blog/lagerung.svg" alt="" width="1200" height="630" loading="lazy">
-            </a>
             <div class="post-card__body">
-              <p class="step__label">Gesundheitstipps</p>
-              <h3 class="post-card__title"><a class="post-card__link" href="blog/cannabisblueten-richtig-lagern.html">Cannabisblüten richtig lagern: Temperatur, Luftfeuchte &amp; Haltbarkeit</a></h3>
-              <p class="post-card__excerpt">Licht, Luft, Wärme und Feuchtigkeit setzen Blüten zu. So bewahren Sie Qualität, Wirkstoffe und Terpene über Monate – mit konkreten Richtwerten.</p>
-              <a class="link-arrow" href="blog/cannabisblueten-richtig-lagern.html">Mehr lesen</a>
+              <p class="step__label">Aus der Forschung · 5 Min.</p>
+              <h3 class="post-card__title"><a class="post-card__link" href="blog/cannabis-entzuendungshemmende-wirkung.html">Cannabis und Entzündungen</a></h3>
+              <p class="post-card__excerpt">Wie Cannabinoide über CB2-Rezeptoren in Entzündungsprozesse eingreifen können.</p>
+              <a class="link-arrow" href="blog/cannabis-entzuendungshemmende-wirkung.html">Beitrag lesen</a>
+            </div>
+          </article>
+          <article class="card post-card">
+            <div class="post-card__body">
+              <p class="step__label">Aus der Forschung · 5 Min.</p>
+              <h3 class="post-card__title"><a class="post-card__link" href="blog/entourage-effekt-terpene-cannabinoide.html">Der Entourage-Effekt</a></h3>
+              <p class="post-card__excerpt">Wie Cannabinoide und Terpene zusammenwirken – und was davon belegt ist.</p>
+              <a class="link-arrow" href="blog/entourage-effekt-terpene-cannabinoide.html">Beitrag lesen</a>
+            </div>
+          </article>
+          <article class="card post-card">
+            <div class="post-card__body">
+              <p class="step__label">Gesundheitstipps · 4 Min.</p>
+              <h3 class="post-card__title"><a class="post-card__link" href="blog/cannabisblueten-richtig-lagern.html">Cannabisblüten richtig lagern</a></h3>
+              <p class="post-card__excerpt">Temperatur, Luftfeuchte und Haltbarkeit – mit konkreten Richtwerten.</p>
+              <a class="link-arrow" href="blog/cannabisblueten-richtig-lagern.html">Beitrag lesen</a>
             </div>
           </article>
         </div>
@@ -357,76 +575,115 @@
 
     <!-- ===================== FAQ ===================== -->
     <section class="section section--alt" id="faq" aria-labelledby="faq-title">
-      <div class="container">
-        <div class="section__head">
-          <p class="eyebrow">Du hast Fragen?</p>
+      <div class="container faq">
+        <div class="faq__intro">
+          <p class="eyebrow">Häufige Fragen</p>
           <h2 id="faq-title">FAQ</h2>
-        </div>
-        <div class="accordion">
-          <details class="accordion__item">
-            <summary>Was bedeutet der Livebestand?</summary>
-            <div class="accordion__panel">Der Livebestand zeigt tagesaktuell, welche Sorten und Produkte aktuell verfügbar sind. So siehst Du vor der Rezepteinreichung, ob Deine Medikation lieferbar ist.</div>
-          </details>
-          <details class="accordion__item">
-            <summary>Wie löse ich mein Cannabis-Rezept ein?</summary>
-            <div class="accordion__panel">Lade Dein E-Rezept (QR-Code) oder Papierrezept in Deinem Konto hoch. Bei Telemedizin übermittelt Dein Anbieter das Rezept direkt an uns.</div>
-          </details>
-          <details class="accordion__item">
-            <summary>Kann ich ohne Rezept bestellen?</summary>
-            <div class="accordion__panel">Nein. Medizinalcannabis ist verschreibungspflichtig. Eine Belieferung erfolgt ausschließlich gegen eine gültige ärztliche Verordnung.</div>
-          </details>
-          <details class="accordion__item">
-            <summary>Was kostet der Versand?</summary>
-            <div class="accordion__panel">Die Versandkosten unterscheiden sich je nach gewählter Versandart: DHL&nbsp;Standard und DHL&nbsp;Express werden zu unterschiedlichen Konditionen angeboten. Die genaue Versandpauschale wird Dir vor Abschluss Deiner Bestellung angezeigt.</div>
-          </details>
-          <details class="accordion__item">
-            <summary>Gibt es eine Mindestbestellmenge?</summary>
-            <div class="accordion__panel">Ja. Die Mindestbestellmenge beträgt 5&nbsp;Gramm. Darüber hinaus richtet sich die Abgabemenge nach Deiner ärztlichen Verordnung.</div>
-          </details>
-          <details class="accordion__item">
-            <summary>Übernimmt die Krankenkasse die Kosten?</summary>
-            <div class="accordion__panel">Ob eine Kostenübernahme erfolgt, entscheidet Deine Krankenkasse im Einzelfall. Sprich dazu bitte mit Deiner Ärztin oder Deinem Arzt.</div>
-          </details>
-          <details class="accordion__item">
-            <summary>Was ist Medizinalcannabis?</summary>
-            <div class="accordion__panel">Medizinalcannabis sind cannabinoidhaltige Arzneimittel – etwa getrocknete Cannabisblüten oder Extrakte – die in pharmazeutischer Qualität hergestellt und geprüft werden. Sie enthalten Wirkstoffe wie THC und CBD und werden ausschließlich gegen eine gültige ärztliche Verordnung abgegeben.</div>
-          </details>
-          <details class="accordion__item">
-            <summary>Wie wird Medizinalcannabis angewendet und dosiert?</summary>
-            <div class="accordion__panel">Anwendung und Dosierung legt immer Deine behandelnde Ärztin oder Dein behandelnder Arzt individuell fest – abhängig von Produkt, Wirkstoffgehalt und Deiner Therapie. Häufige Anwendungsformen sind das Inhalieren mit einem Verdampfer oder die Einnahme von Extrakten. Bitte halte Dich stets an die ärztliche Anweisung und die Hinweise auf der Verpackung; dieser Text ersetzt keine ärztliche Beratung.</div>
-          </details>
-          <details class="accordion__item">
-            <summary>Wie sollte ich Medizinalcannabis lagern?</summary>
-            <div class="accordion__panel">Bewahre Cannabisblüten kühl (etwa 15–20&nbsp;°C), dunkel und luftdicht auf – am besten in einem verschlossenen Glas. So bleiben Wirkstoffe und Terpene möglichst lange erhalten. Beachte außerdem das Verwendbarkeitsdatum und lagere Arzneimittel außerhalb der Reichweite von Kindern. Mehr dazu in unserem <a href="blog/cannabisblueten-richtig-lagern.html">Lagerungs-Beitrag</a>.</div>
-          </details>
-          <details class="accordion__item">
-            <summary>Warum unterscheidet sich die Qualität zwischen Sorten und Chargen?</summary>
-            <div class="accordion__panel">Cannabis ist ein Naturprodukt. Wirkstoffgehalt (THC/CBD), Terpenprofil, Aussehen und Aroma können je nach Sorte, Anbau, Ernte und Charge natürlich schwanken – trotz gleichbleibender pharmazeutischer Qualitätsstandards (GACP/GMP). Jede Charge wird geprüft; die genauen Analysewerte findest Du in den Produktangaben.</div>
-          </details>
+          <p class="lead">Deine Frage ist nicht dabei? Schreib uns an <a href="mailto:support@cannanova-langen.de">support@cannanova-langen.de</a> oder ruf an: <a href="tel:+4961033748430">06103 - 3748430</a>.</p>
+          <nav class="faq__nav" aria-label="FAQ-Themen">
+            <a href="#faq-rezept">Rezept &amp; Bestellung</a>
+            <a href="#faq-versand">Versand &amp; Abholung</a>
+            <a href="#faq-therapie">Produkte &amp; Therapie</a>
+            <a href="#faq-recht">Recht &amp; Kosten</a>
+          </nav>
         </div>
 
-        <h3 class="faq-chapter">Versand</h3>
-        <p class="lead faq-chapter__intro">
-          Bei Problemen mit Deiner Lieferung – ein beschädigtes Paket, ein
-          verlorenes oder gestohlenes Paket oder ein Sendungsstatus, der sich
-          nicht ändert – wende Dich bitte <strong>zuerst an DHL</strong>. Führt
-          das nicht zum Erfolg, kontaktiere uns per E-Mail an
-          <a href="mailto:support@cannanova-langen.de">support@cannanova-langen.de</a>
-          und füge die unterschriebene „Empfängererklärung“ bei.
-        </p>
-        <div class="accordion">
-          <details class="accordion__item">
-            <summary>Mein Paket ist beschädigt angekommen</summary>
-            <div class="accordion__panel">Dokumentiere den Schaden möglichst sofort mit Fotos und melde die Beschädigung zunächst DHL (Schadensmeldung). Lässt sich das darüber nicht klären, sende uns eine E-Mail an <a href="mailto:support@cannanova-langen.de">support@cannanova-langen.de</a> mit den Fotos und der unterschriebenen „Empfängererklärung“, damit wir Dich weiter unterstützen können.</div>
-          </details>
-          <details class="accordion__item">
-            <summary>Mein Paket wurde gestohlen oder nicht zugestellt</summary>
-            <div class="accordion__panel">Prüfe zunächst die Sendungsverfolgung und frage ggf. bei Nachbar:innen, in der Filiale oder an der Packstation nach. Melde den Verlust bei DHL. Bleibt die Sendung verschwunden, kontaktiere uns per E-Mail an <a href="mailto:support@cannanova-langen.de">support@cannanova-langen.de</a> und lege die unterschriebene „Empfängererklärung“ bei.</div>
-          </details>
-          <details class="accordion__item">
-            <summary>Der Sendungsstatus ändert sich nicht (Paket steckt fest)</summary>
-            <div class="accordion__panel">Wenn sich der Sendungsstatus mehrere Tage nicht bewegt, wende Dich zuerst mit Deiner Sendungsnummer an den DHL-Kundenservice. Hilft das nicht weiter, melde Dich per E-Mail an <a href="mailto:support@cannanova-langen.de">support@cannanova-langen.de</a> – bitte mit Sendungsnummer und der unterschriebenen „Empfängererklärung“.</div>
-          </details>
+        <div class="faq__groups">
+          <div class="faq__group" id="faq-rezept">
+            <h3 class="faq__heading">Rezept &amp; Bestellung</h3>
+            <div class="accordion">
+              <details class="accordion__item">
+                <summary>Wie löse ich mein Cannabis-Rezept ein?</summary>
+                <div class="accordion__panel">Lege im Shop ein kostenloses Konto an und lade Dein E-Rezept (QR-Code) oder Papierrezept hoch. Bei Telemedizin übermittelt Dein Anbieter das Rezept direkt an uns, wenn Du dort CannaNova – Nova Apotheke Langen als Apotheke auswählst.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Kann ich ohne Rezept bestellen?</summary>
+                <div class="accordion__panel">Nein. Medizinalcannabis ist verschreibungspflichtig. Eine Belieferung erfolgt ausschließlich gegen eine gültige ärztliche Verordnung.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Wie lange ist mein Rezept gültig?</summary>
+                <div class="accordion__panel">Seit Medizinalcannabis kein Betäubungsmittel mehr ist, gelten die üblichen Fristen: Kassenrezepte sind in der Regel 28 Tage, Privatrezepte drei Monate ab Ausstellung einlösbar. Reiche Dein Rezept am besten zeitnah ein.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Was bedeutet der Livebestand?</summary>
+                <div class="accordion__panel">Der Livebestand zeigt tagesaktuell, welche Sorten bei uns lieferbar sind – mit Wirkstoffgehalt, Terpenen und Preis. So siehst Du vor dem Einlösen, ob Deine Medikation verfügbar ist.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Gibt es eine Mindestbestellmenge?</summary>
+                <div class="accordion__panel">Ja. Die Mindestbestellmenge beträgt 5&nbsp;Gramm pro Sorte. Darüber hinaus richtet sich die Abgabemenge nach Deiner ärztlichen Verordnung.</div>
+              </details>
+            </div>
+          </div>
+
+          <div class="faq__group" id="faq-versand">
+            <h3 class="faq__heading">Versand &amp; Abholung</h3>
+            <div class="accordion">
+              <details class="accordion__item">
+                <summary>Was kostet der Versand?</summary>
+                <div class="accordion__panel">Die Versandkosten hängen von der Versandart ab: DHL&nbsp;Standard und DHL&nbsp;Express werden zu unterschiedlichen Konditionen angeboten. Die genaue Pauschale siehst Du vor Abschluss Deiner Bestellung im Shop.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Kann ich meine Bestellung in der Apotheke abholen?</summary>
+                <div class="accordion__panel">Ja. Wähle im Shop die Abholung, dann holst Du Deine Bestellung in der Nova Apotheke, Bahnstraße 24, 63225 Langen ab.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Mein Paket ist beschädigt angekommen – was tun?</summary>
+                <div class="accordion__panel">Dokumentiere den Schaden sofort mit Fotos und melde ihn zuerst DHL (Schadensmeldung). Lässt sich das darüber nicht klären, schreib uns an <a href="mailto:support@cannanova-langen.de">support@cannanova-langen.de</a> und füge die Fotos sowie die unterschriebene „Empfängererklärung“ bei.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Mein Paket wurde gestohlen oder nicht zugestellt</summary>
+                <div class="accordion__panel">Prüfe die Sendungsverfolgung und frage bei Nachbar:innen, in der Filiale oder an der Packstation nach. Melde den Verlust bei DHL. Bleibt die Sendung verschwunden, schreib uns an <a href="mailto:support@cannanova-langen.de">support@cannanova-langen.de</a> und lege die unterschriebene „Empfängererklärung“ bei.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Der Sendungsstatus ändert sich seit Tagen nicht</summary>
+                <div class="accordion__panel">Wende Dich zuerst mit Deiner Sendungsnummer an den DHL-Kundenservice. Hilft das nicht weiter, schreib uns an <a href="mailto:support@cannanova-langen.de">support@cannanova-langen.de</a> – mit Sendungsnummer und der unterschriebenen „Empfängererklärung“.</div>
+              </details>
+            </div>
+          </div>
+
+          <div class="faq__group" id="faq-therapie">
+            <h3 class="faq__heading">Produkte &amp; Therapie</h3>
+            <div class="accordion">
+              <details class="accordion__item">
+                <summary>Was ist Medizinalcannabis?</summary>
+                <div class="accordion__panel">Cannabinoidhaltige Arzneimittel – etwa getrocknete Blüten oder Extrakte –, die in pharmazeutischer Qualität hergestellt und geprüft werden. Sie enthalten Wirkstoffe wie THC und CBD und werden nur gegen ärztliche Verordnung abgegeben.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Wie wird Medizinalcannabis angewendet und dosiert?</summary>
+                <div class="accordion__panel">Anwendung und Dosierung legt Deine behandelnde Ärztin oder Dein behandelnder Arzt individuell fest. Blüten werden meist mit einem Verdampfer inhaliert, Extrakte eingenommen. Halte Dich an die ärztliche Anweisung; dieser Text ersetzt keine ärztliche Beratung.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Was bedeutet „bestrahlt“ und „unbestrahlt“?</summary>
+                <div class="accordion__panel">Manche Blüten werden nach der Ernte bestrahlt, um die mikrobielle Belastung zu senken. Bestrahlte und unbestrahlte Blüten erfüllen beide die pharmazeutischen Anforderungen. Manche Patient:innen bevorzugen unbestrahlte Ware – im Livebestand kannst Du danach filtern.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Warum unterscheiden sich Sorten und Chargen?</summary>
+                <div class="accordion__panel">Cannabis ist ein Naturprodukt. Wirkstoffgehalt, Terpenprofil, Aussehen und Aroma schwanken je nach Sorte, Anbau, Ernte und Charge – bei gleichbleibenden Qualitätsstandards (GACP/GMP). Jede Charge wird geprüft.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Wie lagere ich Medizinalcannabis richtig?</summary>
+                <div class="accordion__panel">Kühl (etwa 15–20&nbsp;°C), dunkel und luftdicht, am besten in einem verschlossenen Glas – und außerhalb der Reichweite von Kindern. Mehr im <a href="blog/cannabisblueten-richtig-lagern.html">Beitrag zur Lagerung</a>.</div>
+              </details>
+            </div>
+          </div>
+
+          <div class="faq__group" id="faq-recht">
+            <h3 class="faq__heading">Recht &amp; Kosten</h3>
+            <div class="accordion">
+              <details class="accordion__item">
+                <summary>Ist der Versand nach der geplanten Gesetzesänderung noch erlaubt?</summary>
+                <div class="accordion__panel">Ja, Stand Ende September 2026. Der Entwurf zur Änderung des Medizinal-Cannabisgesetzes ist noch nicht beschlossen. Bis dahin bleiben Telemedizin-Rezepte und der Versand durch Apotheken zulässig. Abholung und Botendienst wären auch nach dem Entwurf weiter möglich.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Darf ich mit Medizinalcannabis Auto fahren?</summary>
+                <div class="accordion__panel">Wer ein ärztlich verordnetes Cannabis-Arzneimittel bestimmungsgemäß einnimmt, ist vom THC-Grenzwert ausgenommen – aber nur, wenn die Fahrtüchtigkeit nicht beeinträchtigt ist. Sprich das mit Deiner Ärztin oder Deinem Arzt ab und führe einen Nachweis der Verordnung mit.</div>
+              </details>
+              <details class="accordion__item">
+                <summary>Übernimmt die Krankenkasse die Kosten?</summary>
+                <div class="accordion__panel">Das entscheidet Deine Krankenkasse im Einzelfall, meist nach vorherigem Antrag. Sprich dazu mit Deiner Ärztin oder Deinem Arzt.</div>
+              </details>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -436,24 +693,22 @@
       <div class="container">
         <div class="section__head">
           <p class="eyebrow">Kontakt</p>
-          <h2 id="contact-title">So erreichst Du uns</h2>
+          <h2 id="contact-title">Persönlich beraten – telefonisch, per E-Mail oder vor Ort</h2>
         </div>
         <div class="contact__grid">
           <div class="card contact__details">
-            <p class="step__label">Adresse</p>
-            <p class="card__text">Nova Apotheke<br>Bahnstraße 24<br>63225 Langen</p>
-            <p class="step__label contact__gap">Telefon</p>
-            <p class="card__text"><a href="tel:+4961033748430">06103 - 3748430</a></p>
-            <p class="step__label contact__gap">E-Mail</p>
-            <p class="card__text"><a href="mailto:support@cannanova-langen.de">support@cannanova-langen.de</a></p>
-            <p class="step__label contact__gap">Telefonische Erreichbarkeit</p>
-            <p class="card__text">Mo–Fr 09:00 – 16:45 Uhr</p>
+            <dl class="contact__list">
+              <div><dt>Adresse</dt><dd>Nova Apotheke<br>Bahnstraße 24<br>63225 Langen</dd></div>
+              <div><dt>Telefon</dt><dd><a href="tel:+4961033748430">06103 - 3748430</a></dd></div>
+              <div><dt>E-Mail</dt><dd><a href="mailto:support@cannanova-langen.de">support@cannanova-langen.de</a></dd></div>
+              <div><dt>Telefonisch erreichbar</dt><dd>Mo–Fr 09:00 – 16:45 Uhr</dd></div>
+            </dl>
             <a class="btn btn--primary contact__cta" href="mailto:support@cannanova-langen.de">Beratung anfragen</a>
           </div>
           <iframe
             class="contact__map"
             title="Karte und Anfahrt zur Nova Apotheke, Bahnstraße 24, 63225 Langen"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=8.6679%2C49.9873%2C8.6759%2C49.9913&layer=mapnik&marker=49.9893473%2C8.6719391"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=8.6679%2C49.9873%2C8.6759%2C49.9913&amp;layer=mapnik&amp;marker=49.9893473%2C8.6719391"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -466,15 +721,23 @@
     <div class="container site-footer__grid">
       <div class="site-footer__col">
         <span class="brand brand--footer">
-          <span class="brand__mark" aria-hidden="true" style="color: var(--color-text-on-brand);">
-            <svg viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg"><ellipse cx="100" cy="100" rx="95" ry="95" fill="none" stroke="currentColor" stroke-width="4" opacity="0.42" transform="rotate(-16 100 100)"/><circle cx="169" cy="47" r="8.5" fill="currentColor"/><path d="M0,0 C -25.08,-63.84 -12.54,-139.84 0,-152 C 12.54,-139.84 25.08,-63.84 0,0 Z" transform="translate(100,182) rotate(0)" fill="currentColor"/><path d="M0,0 C -21.57,-54.9 -10.78,-120.26 0,-130.72 C 10.78,-120.26 21.57,-54.9 0,0 Z" transform="translate(100,182) rotate(25)" fill="currentColor"/><path d="M0,0 C -21.57,-54.9 -10.78,-120.26 0,-130.72 C 10.78,-120.26 21.57,-54.9 0,0 Z" transform="translate(100,182) rotate(-25)" fill="currentColor"/><path d="M0,0 C -16.30,-41.5 -8.15,-90.9 0,-98.8 C 8.15,-90.9 16.30,-41.5 0,0 Z" transform="translate(100,182) rotate(52)" fill="currentColor"/><path d="M0,0 C -16.30,-41.5 -8.15,-90.9 0,-98.8 C 8.15,-90.9 16.30,-41.5 0,0 Z" transform="translate(100,182) rotate(-52)" fill="currentColor"/><path d="M0,0 C -10.28,-26.17 -5.14,-57.33 0,-62.32 C 5.14,-57.33 10.28,-26.17 0,0 Z" transform="translate(100,182) rotate(80)" fill="currentColor"/><path d="M0,0 C -10.28,-26.17 -5.14,-57.33 0,-62.32 C 5.14,-57.33 10.28,-26.17 0,0 Z" transform="translate(100,182) rotate(-80)" fill="currentColor"/><rect x="96.5" y="182" width="7" height="20" rx="3.5" fill="currentColor"/></svg>
-          </span>
-          <span class="brand__name" style="color: var(--color-text-on-brand);"><span class="brand__name-canna">CANNA</span>NOVA</span>
+          <span class="brand__mark" aria-hidden="true"><svg><use href="#cn-mark"/></svg></span>
+          <span class="brand__name"><span class="brand__name-canna">CANNA</span>NOVA</span>
         </span>
-        <p class="card__text" style="color: var(--color-text-on-brand); opacity: 0.85; margin-top: var(--space-3);">
-          Spezialisierter Bereich der Nova Apotheke Langen für die Versorgung mit
-          cannabinoidhaltigen Arzneimitteln.
+        <p class="site-footer__about">
+          Spezialisierter Bereich der Nova Apotheke Langen für die Versorgung
+          mit cannabinoidhaltigen Arzneimitteln.
         </p>
+      </div>
+      <div class="site-footer__col">
+        <h4>Service</h4>
+        <ul>
+          <li><a href="https://shop.cannanova-langen.de" target="_blank" rel="noopener">Zum Shop</a></li>
+          <li><a href="#livebestand">Livebestand</a></li>
+          <li><a href="#so-gehts">So geht's</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
       </div>
       <div class="site-footer__col">
         <h4>Rechtliches</h4>
@@ -483,15 +746,6 @@
           <li><a href="https://shop.cannanova-langen.de/privacy-policy">Datenschutzerklärung</a></li>
           <li><a href="https://shop.cannanova-langen.de/terms-and-conditions">AGB</a></li>
           <li><a href="https://shop.cannanova-langen.de/revocation-policy">Widerrufsbelehrung</a></li>
-        </ul>
-      </div>
-      <div class="site-footer__col">
-        <h4>Service</h4>
-        <ul>
-          <li><a href="#so-funktioniert">So funktioniert's</a></li>
-          <li><a href="#livebestand">Livebestand</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </div>
       <div class="site-footer__col">

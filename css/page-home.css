@@ -2,6 +2,15 @@
    Home page — layout only. No new colors/fonts/sizes (those live in tokens).
    ========================================================================== */
 
+.section__head--split {
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-5) var(--space-9);
+  align-items: end;
+}
+.section__head--split h2 { margin-bottom: 0; }
+
 /* ---- Hero -------------------------------------------------------------- */
 .hero { padding-top: var(--space-10); padding-bottom: var(--space-10); }
 .hero__grid {
@@ -33,7 +42,33 @@
 }
 .hero__lead { max-width: 44ch; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-7); }
-.hero .fine-print { margin-top: var(--space-5); max-width: 44ch; }
+
+/* Live stats under the CTAs: real numbers from the shop feed. */
+.hero__stats {
+  margin: var(--space-8) 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: var(--border-width) solid var(--color-border);
+}
+.hero__stats div { display: grid; gap: 2px; }
+.hero__stats dt {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+.hero__stats dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
 
 /* ---- Spec card: the newest live product, set like a batch label -------- */
 .spec {
@@ -83,6 +118,7 @@
   padding-top: var(--space-4);
 }
 .spec__data > div { display: grid; gap: 2px; }
+.spec__data .spec__wide { grid-column: 1 / -1; }
 .spec__data dt {
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
@@ -119,28 +155,152 @@
 .spec--loading .spec__price { color: var(--color-text-subtle); }
 
 /* ---- Live inventory ---------------------------------------------------- */
-/* auto-fill (not auto-fit) keeps the empty column tracks, so when the shop
-   returns fewer than 4 items a lone card stays card-sized (~1/4 width on
-   desktop) instead of stretching across the row and ballooning its image.
-   minmax(min(100%, 220px), 1fr) still collapses to a single column on phones. */
-.inventory { grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-7);
+  padding-block: var(--space-5);
+  border-top: var(--border-width) solid var(--color-border);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+.filters__group { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+.filters__label {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  min-width: 4.5rem;
+}
+.inventory__count {
+  margin: var(--space-5) 0;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+/* auto-fill keeps empty tracks so a short result list stays card-sized. */
+.inventory { grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); }
 .inventory__more {
   margin-top: var(--space-7);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-4) var(--space-5);
+  gap: var(--space-4) var(--space-6);
 }
-.inventory__more-note { max-width: 48ch; }
 
-/* ---- FAQ sub-chapter --------------------------------------------------- */
-.faq-chapter { margin-top: var(--space-9); margin-bottom: var(--space-3); }
-.faq-chapter__intro { max-width: 64ch; margin-bottom: var(--space-5); }
+/* ---- Two paths (dark band) --------------------------------------------- */
+.paths {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: var(--border-width) solid var(--color-rule-on-dark);
+}
+.path {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: var(--space-4);
+  padding: var(--space-7) var(--space-7) var(--space-2) 0;
+}
+.path + .path {
+  padding-left: var(--space-7);
+  padding-right: 0;
+  border-left: var(--border-width) solid var(--color-rule-on-dark);
+}
+.path__kicker {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-signal);
+}
+.path__title { color: var(--color-text-on-brand); font-size: var(--font-size-xl); }
+.path__steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+.path__steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 2.25rem;
+  color: var(--color-text-on-dark-muted);
+}
+.path__steps li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--font-size-sm);
+  color: var(--color-signal);
+}
+.path__steps strong { color: var(--color-text-on-brand); font-weight: var(--font-weight-semibold); }
+.path__steps a { color: var(--color-signal); text-decoration: underline; }
 
-/* ---- Strains ----------------------------------------------------------- */
+/* ---- Strains: rows that filter the Livebestand ------------------------- */
+.strains {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: var(--border-width) solid var(--color-border);
+}
+.strain {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-5) var(--space-5) var(--space-4);
+  border-left: var(--border-accent-width) solid var(--accent, var(--color-brand));
+  border-bottom: var(--border-width) solid var(--color-border);
+  color: var(--color-text);
+  transition: background-color var(--duration-fast) var(--easing-standard);
+}
+.strain + .strain { margin-left: var(--space-2); }
+.strain:hover { text-decoration: none; background-color: var(--color-bg-alt); }
+.strain__name { font-family: var(--font-display); font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold); letter-spacing: var(--letter-spacing-tight); line-height: var(--line-height-snug); }
+.strain__text { color: var(--color-text-muted); font-size: var(--font-size-sm); }
+.strain__count {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-brand);
+}
+.strain__count:empty::before { content: "Im Livebestand ansehen"; }
 .strains__note { margin-top: var(--space-6); max-width: 70ch; }
 
-/* ---- Partners: plain logos on a rule, no cells ------------------------- */
+/* ---- Law status -------------------------------------------------------- */
+.law {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: var(--space-9);
+  align-items: start;
+}
+.law__intro { display: grid; justify-items: start; gap: var(--space-4); }
+.law__intro h2 { margin: 0; }
+.law__timeline { list-style: none; margin: 0; padding: 0; border-top: var(--border-width) solid var(--color-border-strong); }
+.law__timeline li {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: var(--space-5);
+  padding-block: var(--space-5);
+  border-bottom: var(--border-width) solid var(--color-border-strong);
+  color: var(--color-text-muted);
+}
+.law__timeline strong { color: var(--color-text); }
+.law__date {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-subtle);
+  padding-top: 2px;
+}
+.law__now .law__date { color: var(--color-signal); font-weight: var(--font-weight-medium); }
+
+/* ---- Partners: plain logos on a rule ----------------------------------- */
 .partners {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -150,11 +310,39 @@
   padding-top: var(--space-7);
 }
 .partners__logo { display: flex; align-items: center; justify-content: center; min-height: 64px; }
-.partners__logo img {
-  max-height: 40px;
-  max-width: 150px;
-  width: auto;
-  object-fit: contain;
+.partners__logo img { max-height: 40px; max-width: 150px; width: auto; height: auto; object-fit: contain; }
+
+/* ---- Knowledge: one featured article + a list -------------------------- */
+.posts {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: var(--space-5);
+}
+.post-card--feature { grid-row: span 2; }
+.post-card--feature .post-card__title { font-size: var(--font-size-xl); }
+
+/* ---- FAQ --------------------------------------------------------------- */
+.faq {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  gap: var(--space-9);
+  align-items: start;
+}
+.faq__intro { display: grid; gap: var(--space-4); position: sticky; top: var(--space-11); }
+.faq__intro h2 { margin: 0; }
+.faq__nav { display: grid; gap: var(--space-2); margin-top: var(--space-3); }
+.faq__nav a { color: var(--color-text); font-weight: var(--font-weight-medium); }
+.faq__groups { display: grid; gap: var(--space-8); }
+.faq__group { scroll-margin-top: var(--space-11); }
+.faq__heading {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
 }
 
 /* ---- Contact ----------------------------------------------------------- */
@@ -164,7 +352,16 @@
   gap: var(--space-5);
   align-items: stretch;
 }
-.contact__gap { margin-top: var(--space-5); }
+.contact__list { margin: 0; display: grid; gap: var(--space-5); }
+.contact__list div { display: grid; gap: var(--space-1); }
+.contact__list dt {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+.contact__list dd { margin: 0; color: var(--color-text); }
 .contact__cta { margin-top: var(--space-6); }
 .contact__map {
   width: 100%;
@@ -172,22 +369,39 @@
   background-color: var(--color-bg-alt);
   border: var(--border-width) solid var(--color-border);
   border-radius: var(--radius-sm);
-  /* iframe map */
   display: block;
 }
 
+/* Anchored sections clear the sticky header. */
+section[id] { scroll-margin-top: var(--space-9); }
+
 /* ---- Responsive -------------------------------------------------------- */
 @media (max-width: 860px) {
+  .section__head--split { grid-template-columns: 1fr; }
   .hero { padding-top: var(--space-8); padding-bottom: var(--space-8); }
   .hero__grid { grid-template-columns: 1fr; gap: var(--space-7); }
   .hero h1 { max-width: none; }
+  .paths { grid-template-columns: 1fr; }
+  .path { padding-right: 0; }
+  .path + .path { padding-left: 0; border-left: 0; border-top: var(--border-width) solid var(--color-rule-on-dark); }
+  .strains { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); border-top: 0; }
+  .strain + .strain { margin-left: 0; }
+  .law { grid-template-columns: 1fr; gap: var(--space-6); }
   .partners { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .posts { grid-template-columns: 1fr 1fr; }
+  .post-card--feature { grid-column: 1 / -1; grid-row: auto; }
+  .faq { grid-template-columns: 1fr; gap: var(--space-6); }
+  .faq__intro { position: static; }
   .contact__grid { grid-template-columns: 1fr; }
   .contact__map { min-height: 220px; }
 }
 
 @media (max-width: 540px) {
-  /* The kicker below already says "Zuletzt aufgenommen"; drop the duplicate
-     label so the card header stays on one line on phones. */
   .spec__id { display: none; }
+  .hero__stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+  .hero__stats dd { font-size: var(--font-size-base); }
+  .filters__label { min-width: 0; width: 100%; }
+  .strains { grid-template-columns: 1fr; }
+  .law__timeline li { grid-template-columns: 1fr; gap: var(--space-1); }
+  .posts { grid-template-columns: 1fr; }
 }

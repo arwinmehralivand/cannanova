@@ -10,14 +10,16 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-  /* Guard against any element forcing the page wider than the screen. */
-  overflow-x: hidden;
+  /* Guard against any element forcing the page wider than the screen.
+     "clip" (not "hidden") so html/body don't become scroll containers,
+     which would break the sticky header. */
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
@@ -208,6 +210,83 @@ p { margin: 0; }
 }
 .btn--secondary:hover { border-color: var(--color-brand); background-color: var(--color-brand-soft); }
 
+/* Signal button: the one amber CTA, used on the dark band only. */
+.btn--signal {
+  background-color: var(--color-signal);
+  border-color: var(--color-signal);
+  color: var(--color-brand-darker);
+}
+.btn--signal:hover { background-color: var(--color-signal-soft); border-color: var(--color-signal-soft); }
+
+/* Outline button for dark surfaces. */
+.btn--ghost-light {
+  background-color: transparent;
+  color: var(--color-text-on-brand);
+  border-color: var(--color-rule-on-dark);
+}
+.btn--ghost-light:hover { border-color: var(--color-text-on-brand); }
+
+/* ---- Skip link (keyboard users) ---------------------------------------- */
+.skip-link {
+  position: absolute;
+  left: var(--space-4);
+  top: -100px;
+  z-index: 100;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-brand);
+  color: var(--color-text-on-brand);
+  border-radius: var(--radius-xs);
+}
+.skip-link:focus { top: var(--space-4); }
+
+/* ---- Filter chips & toggle --------------------------------------------- */
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.chip {
+  min-height: 40px;
+  padding: var(--space-2) var(--space-4);
+  border: var(--border-width) solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--easing-standard),
+              border-color var(--duration-fast) var(--easing-standard),
+              color var(--duration-fast) var(--easing-standard);
+}
+.chip:hover { border-color: var(--color-brand); }
+.chip[aria-pressed="true"] {
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+  color: var(--color-text-on-brand);
+}
+.chip__n {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--font-size-xs);
+  margin-left: var(--space-1);
+  opacity: 0.7;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 44px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+.toggle input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--color-brand);
+  cursor: pointer;
+}
+
 /* ---- Inline arrow link ------------------------------------------------- */
 .link-arrow {
   display: inline-flex;
@@ -274,6 +353,21 @@ p { margin: 0; }
   background-color: var(--genetic-color, var(--color-brand));
 }
 .product-card__name { font-size: var(--font-size-md); margin: 0; }
+.product-card__name a { color: inherit; }
+.product-card__name a:hover { color: var(--color-brand); text-decoration: none; }
+.product-card__meta { flex-wrap: wrap; row-gap: var(--space-1); }
+.product-card__foot { flex-wrap: wrap; row-gap: var(--space-2); }
+.product-card__price, .product-card__foot .link-arrow { white-space: nowrap; }
+.product-card__genetic { white-space: nowrap; }
+.product-card__placeholder { width: 34%; height: auto; aspect-ratio: 200 / 210; color: var(--color-border-strong); }
+.product-card__tag {
+  white-space: nowrap;
+  padding: 1px var(--space-2);
+  border: var(--border-width) solid var(--color-border-strong);
+  border-radius: var(--radius-xs);
+  color: var(--color-text-muted);
+}
+.product-card__terpenes { font-size: var(--font-size-sm); color: var(--color-text-subtle); }
 .product-card__manufacturer { color: var(--color-text-muted); font-size: var(--font-size-sm); }
 .product-card__stats {
   display: flex;
@@ -522,7 +616,9 @@ p { margin: 0; }
   color: var(--color-text-subtle);
   margin-top: 3px;
 }
-.site-nav { display: flex; gap: var(--space-5); }
+.site-nav { display: flex; align-items: center; gap: var(--space-5); }
+.site-nav a.site-nav__cta { color: var(--color-text-on-brand); padding-inline: var(--space-4); }
+.site-nav a.site-nav__cta:hover { color: var(--color-text-on-brand); }
 .site-nav a {
   color: var(--color-text);
   font-size: var(--font-size-sm);
@@ -585,6 +681,9 @@ p { margin: 0; }
   color: var(--color-text-on-dark-muted);
 }
 .site-footer__col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+.site-footer .brand__mark,
+.site-footer .brand__name { color: var(--color-text-on-brand); }
+.site-footer__about { color: var(--color-text-on-dark-muted); font-size: var(--font-size-sm); margin-top: var(--space-4); max-width: 34ch; }
 .site-footer__legal {
   border-top: var(--border-width) solid var(--color-rule-on-dark);
   padding-block: var(--space-5);
@@ -612,12 +711,14 @@ p { margin: 0; }
     left: 0;
     right: 0;
     flex-direction: column;
+    align-items: stretch;
     gap: 0;
     background-color: var(--color-surface);
     border-bottom: var(--border-width) solid var(--color-border);
     box-shadow: var(--shadow-md);
   }
   .site-nav.site-nav--open { display: flex; }
+  .site-nav a.site-nav__cta { margin: var(--space-4) var(--container-pad); border-top: 0; justify-content: center; }
   .site-nav a {
     padding: var(--space-4) var(--container-pad);
     border-top: var(--border-width) solid var(--color-border);
