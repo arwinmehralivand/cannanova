@@ -423,6 +423,7 @@ p { margin: 0; }
   border-radius: var(--radius-sm);
   background-color: var(--color-surface);
 }
+.inventory__notice .btn { margin-top: var(--space-4); }
 
 /* Post card: blog/research teaser with cover image ---------------------- */
 .post-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }

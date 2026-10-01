@@ -256,11 +256,25 @@ function renderStats(items) {
 }
 
 /* ---- Load ---------------------------------------------------------------- */
-async function loadInventory() {
+// One retry covers short network hiccups before we show the error state.
+async function fetchProducts(url, attempts = 2) {
+  for (let i = 1; ; i++) {
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch (err) {
+      if (i >= attempts) throw err;
+      await new Promise((r) => setTimeout(r, 1500));
+    }
+  }
+}
+
+async function loadInventory({ rebind = true } = {}) {
   const grid = document.getElementById("livebestand-grid");
   if (!grid) return;
 
-  bindFilters();
+  if (rebind) bindFilters();
   grid.innerHTML = skeletons(4);
 
   const url = new URL(`${CONFIG.apiBase}/pharmacy-shop/products`);
@@ -269,9 +283,7 @@ async function loadInventory() {
   url.searchParams.set("page", "1");
 
   try {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const body = await res.json();
+    const body = await fetchProducts(url);
     const items = (Array.isArray(body.data) ? body.data : []).filter((p) => p.available !== false);
 
     state.items = items;
@@ -286,7 +298,13 @@ async function loadInventory() {
     renderChipCounts();
   } catch (err) {
     grid.innerHTML =
-      `<p class="inventory__notice">Der Livebestand konnte gerade nicht geladen werden. Den aktuellen Bestand findest Du jederzeit <a href="${CONFIG.shopBase}/products" target="_blank" rel="noopener">direkt im Shop</a>.</p>`;
+      `<div class="inventory__notice"><p>Der Livebestand konnte gerade nicht geladen werden. Den aktuellen Bestand findest Du jederzeit <a href="${CONFIG.shopBase}/products" target="_blank" rel="noopener">direkt im Shop</a>.</p>` +
+      `<button type="button" class="btn btn--secondary" id="inventory-retry">Erneut laden</button></div>`;
+    document.getElementById("inventory-retry")?.addEventListener("click", () => loadInventory({ rebind: false }));
+    const more = document.getElementById("inventory-more");
+    if (more) more.hidden = true;
+    const count = document.getElementById("inventory-count");
+    if (count) count.textContent = "";
     renderHeroSpec(null);
     renderStats([]);
     console.error("[livebestand] load failed:", err);
@@ -294,7 +312,7 @@ async function loadInventory() {
 }
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", loadInventory);
+  document.addEventListener("DOMContentLoaded", () => loadInventory());
 } else {
   loadInventory();
 }
