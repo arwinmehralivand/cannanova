@@ -16,3 +16,5 @@ README.md
 # Local-only logo exports (kept for download, not part of the site)
 assets/cannanova-logo.png
 assets/cannanova-logo.svg
+worker
+worker/**

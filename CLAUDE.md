@@ -163,7 +163,9 @@ that: small, direct, low-ceremony changes.
 
 - **We always push directly to `main`,** then **deploy with `npx wrangler deploy`**.
   The live site (`cannanova-langen.de` and `www.`) is the Cloudflare Worker
-  `cannanova` (static assets only, config in `wrangler.jsonc`). There is no
+  `cannanova` (static files plus one tiny script, `worker/index.js`, that serves
+  `/livebestand.json` — a first-party copy of the shop stock, because browser
+  privacy extensions block the cross-site shop API; config in `wrangler.jsonc`). There is no
   GitHub → Cloudflare auto-deploy: a push alone does NOT update the live site.
 - `.assetsignore` keeps repo-internal files (`.git`, `.claude`, `CLAUDE.md`,
   `README.md`, configs) off the website — keep it up to date when adding

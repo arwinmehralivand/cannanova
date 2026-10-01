@@ -3,12 +3,15 @@
    renders (a) the hero spec card + live stats, (b) a filterable product grid,
    (c) live counts on the strain cards and filter chips.
 
-   Fully client-side. The shop resolves the pharmacy by its own domain and
-   sends CORS headers for cannanova-langen.de, so no custom header is needed
-   (a custom header would force a cross-subdomain CORS preflight).
+   Data comes from /livebestand.json, a first-party copy of the shop API
+   served by our Worker (worker/index.js): privacy extensions often block
+   cross-site /api/ requests. If that fails (e.g. local preview without the
+   Worker), we fall back to the shop API directly, which sends CORS headers
+   for cannanova-langen.de.
    ========================================================================== */
 
 const CONFIG = {
+  localFeed: "/livebestand.json",
   apiBase: "https://shop.cannanova-langen.de/api/shop/v1",
   shopBase: "https://shop.cannanova-langen.de",
   fetchSize: 100,   // the whole live stock fits in one page
@@ -283,7 +286,7 @@ async function loadInventory({ rebind = true } = {}) {
   url.searchParams.set("page", "1");
 
   try {
-    const body = await fetchProducts(url);
+    const body = await fetchProducts(CONFIG.localFeed, 1).catch(() => fetchProducts(url));
     const items = (Array.isArray(body.data) ? body.data : []).filter((p) => p.available !== false);
 
     state.items = items;

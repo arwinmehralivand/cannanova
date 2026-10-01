@@ -1,13 +1,18 @@
 {
-  // Cloudflare Worker that serves this static site (static assets only, no code).
+  // Cloudflare Worker that serves this static site. worker/index.js only
+  // handles /livebestand.json (first-party copy of the shop stock); every
+  // other request goes straight to the static files.
   // Deploy with:  npx wrangler deploy
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "cannanova",
+  "main": "worker/index.js",
   "compatibility_date": "2026-08-08",
   "compatibility_flags": ["nodejs_compat"],
   "observability": { "enabled": true },
   "assets": {
     "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": ["/livebestand.json"],
     "not_found_handling": "404-page"
   }
 }
