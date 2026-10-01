@@ -325,8 +325,19 @@
   border-top: var(--border-width) solid var(--color-border);
   padding-top: var(--space-7);
 }
-.partners__logo { display: flex; align-items: center; justify-content: center; min-height: 64px; }
-.partners__logo img { max-height: 40px; max-width: 150px; width: auto; height: auto; object-fit: contain; }
+/* Optical sizing: every logo gets roughly the same visual area, so wide
+   wordmarks come out wider and lower, compact marks taller (height =
+   size / sqrt(aspect ratio)). --ar is set per logo in the markup. */
+.partners__logo { display: flex; align-items: center; justify-content: center; min-height: calc(var(--partner-logo-size) + var(--space-3)); }
+.partners__logo img {
+  height: calc(var(--partner-logo-size) * 0.5);
+  height: calc(var(--partner-logo-size) / sqrt(var(--ar, 3)));
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  /* Logos delivered on solid white blend into the tinted band. */
+  mix-blend-mode: multiply;
+}
 
 /* ---- Knowledge: one featured article + a list -------------------------- */
 .posts {
@@ -424,6 +435,7 @@ section[id] { scroll-margin-top: var(--space-9); }
   .hero__stats dd { font-size: var(--font-size-base); }
   .filters__label { min-width: 0; width: 100%; }
   .strains { grid-template-columns: 1fr; }
+  .partners { --partner-logo-size: 4.75rem; gap: var(--space-5); }
   .law__timeline li { grid-template-columns: 1fr; gap: var(--space-1); }
   .posts { grid-template-columns: 1fr; }
   .extracts__art { display: none; }

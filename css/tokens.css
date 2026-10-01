@@ -104,6 +104,7 @@
   /* ---- Layout ---------------------------------------------------------- */
   --container-max: 1120px;
   --container-pad: var(--space-5);
+  --partner-logo-size: 6rem;       /* visual size of a square partner logo */
 
   /* ---- Breakpoints (reference; used in media queries) ------------------ */
   /* --bp-sm: 540px;  --bp-md: 860px; */
